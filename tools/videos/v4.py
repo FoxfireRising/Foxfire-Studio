@@ -1,0 +1,37 @@
+"""Video 4: the player on a post, as a visitor sees it."""
+from playwright.sync_api import sync_playwright
+from common import *
+from rec import Recorder, render
+import pointer as P
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'docs', 'media')
+with sync_playwright() as p:
+	browser = p.chromium.launch(executable_path=CHROME, args=['--autoplay-policy=no-user-gesture-required', '--hide-scrollbars'])
+	ctx = browser.new_context(viewport={'width': 960, 'height': 465}, device_scale_factor=4/3)
+	import ranges; ranges.install(ctx)
+	page = ctx.new_page()
+	page.goto(BASE + '/?p=%d' % POST, wait_until='load'); page.wait_for_timeout(2000)
+	page.wait_for_selector('.rrt-player.is-ready', timeout=20000)
+	page.evaluate("window.scrollTo(0, 160)"); page.wait_for_timeout(300)
+	P.park(page, 900, 420)
+	r = Recorder(page, '/tmp/v4'); r.start()
+	r.say('A post with a reading gets a listening player, in your own colours.')
+	r.hold(3.5)
+	r.say('Visitors press play, skip back or ahead, and change the speed.')
+	P.click(page, '.rrt-player button[aria-label*="Play" i], .rrt-player .rrt-play', after=2500)
+	r.say('Read along lights up each word of the post as it is heard.')
+	P.click(page, '.rrt-player button:has-text("Read along")', after=600)
+	P.park(page, 900, 420)
+	page.evaluate("window.scrollTo({top: 300, behavior: 'smooth'})")
+	r.hold(6)
+	r.say('Click any word in the post to jump to that moment.')
+	P.click(page, '.entry-content p:nth-of-type(3) .rrt-fw:text-is("fog")', after=400)
+	r.hold(4)
+	r.say('Transcript opens the whole text with times, for anyone who prefers to read.')
+	page.evaluate("window.scrollTo({top: 160, behavior: 'smooth'})"); page.wait_for_timeout(700)
+	P.click(page, '.rrt-player button:has-text("Transcript")', after=3500)
+	r.say('Listeners come back to where they stopped. No cookies, nothing sent elsewhere.')
+	r.hold(3.5)
+	r.stop()
+	render(r, OUT + '/player.mp4', poster=OUT + '/player.jpg', poster_at=12)
+	browser.close()
+print('done')

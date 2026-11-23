@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "foxfire-studio/player",
+	"title": "Reading player",
+	"category": "media",
+	"icon": "format-audio",
+	"description": "Plays this post's audio reading, or another reading you choose.",
+	"keywords": [ "listen", "audio", "podcast", "reading", "Foxfire" ],
+	"textdomain": "foxfire-studio",
+	"attributes": {
+		"reading": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"usesContext": [ "postId", "postType" ],
+	"supports": {
+		"align": [ "wide", "full" ],
+		"html": false,
+		"spacing": {
+			"margin": true
+		}
+	}
+}

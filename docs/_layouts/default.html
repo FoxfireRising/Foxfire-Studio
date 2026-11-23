@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title and page.title != site.title %}{{ page.title | strip_html }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the page</a>
+<header class="top">
+  <a class="brand" href="{{ '/' | relative_url }}">Foxfire Studio</a>
+  <nav aria-label="Site">
+    <a href="{{ '/guide/' | relative_url }}">Guides</a>
+    <a href="{{ '/videos.html' | relative_url }}">Videos</a>
+    <a href="https://github.com/FoxfireRising/Foxfire-Studio/releases/latest">Download</a>
+    <a href="https://github.com/FoxfireRising/Foxfire-Studio">GitHub</a>
+  </nav>
+</header>
+<main id="main">
+{{ content }}
+</main>
+<footer class="foot">
+  <p>Foxfire Studio is free software under the <a href="https://github.com/FoxfireRising/Foxfire-Studio/blob/main/LICENSE">GNU GPL, version 2 or later</a>. These guides are the same ones the plugin shows under Foxfire Studio, Help.</p>
+</footer>
+</body>
+</html>

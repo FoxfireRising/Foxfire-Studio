@@ -1,0 +1,80 @@
+name: Tests
+
+# Once per pull request into main, and again when new commits reach it.
+# Plain branch pushes run nothing, so work in progress costs no minutes:
+# run tests/run.sh locally while building, and open the pull request
+# when the build is ready to merge. "Run workflow" on the Actions tab
+# runs the checks by hand on any branch.
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# A newer push to the same pull request stops the run it replaces.
+concurrency:
+  group: tests-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: pdo_sqlite, sqlite3, mbstring, gd
+          tools: none
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Run every check
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+          # For tests/upgrade.py, to fetch older release zips from this repository (skipped where it has none).
+          GH_TOKEN: ${{ github.token }}
+        run: tests/run.sh
+
+  # The oldest WordPress and PHP the plugin claims (Requires at least 6.0, Requires PHP 7.4).
+  oldest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          extensions: pdo_sqlite, sqlite3, mbstring, gd
+          tools: none
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: Run the checks on WordPress 6.0 and PHP 7.4
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: tests/run.sh oldest

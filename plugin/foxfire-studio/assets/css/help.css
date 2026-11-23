@@ -1,0 +1,37 @@
+/* Help (1.32.0): the Foxfire Studio, Help screen. Groups, parts and section links since 1.36.0. */
+.rrt-help { max-width: 52rem; }
+.rrt-help-lead { font-size: 14px; }
+.rrt-help-search { margin: 1.25em 0; }
+.rrt-help-search label { font-weight: 600; margin-right: 0.4em; }
+.rrt-help-count { margin-left: 0.5em; color: #50575e; }
+.rrt-help-toc ul { list-style: none; margin: 0; padding: 0; }
+.rrt-help-toc li { margin: 0 0 0.5em; }
+.rrt-help-toc a { font-weight: 600; }
+.rrt-help-toc .rrt-help-intro { color: #50575e; }
+.rrt-help-topic { margin: 2em 0 0; padding: 1.25em 1.5em 0.5em; background: #fff; border: 1px solid #c3c4c7; border-radius: 4px; }
+.rrt-help-topic:focus { outline: 2px solid #2271b1; outline-offset: 2px; }
+.rrt-help-topic h2 { margin-top: 0; }
+.rrt-help-topic .rrt-help-intro { font-style: italic; color: #50575e; }
+.rrt-help-topic ol,
+.rrt-help-topic ul { margin-left: 1.5em; }
+.rrt-help-topic ul { list-style: disc; }
+.rrt-help-topic li { margin-bottom: 0.5em; line-height: 1.5; }
+.rrt-help-note { padding: 0.6em 0.9em; border-left: 4px solid #2271b1; background: #f0f6fc; }
+.rrt-help-top { font-size: 12px; }
+.rrt-help-news { margin: 1.5em 0; padding: 0.75em 1.25em; background: #fff; border: 1px solid #c3c4c7; border-radius: 4px; }
+.rrt-help-news h2 { margin-top: 0.4em; }
+.rrt-help-news h3 { margin: 1em 0 0.3em; font-size: 13px; }
+.rrt-help-news ul { list-style: disc; margin-left: 1.5em; }
+.rrt-help-this { font-weight: 400; color: #50575e; }
+.rrt-help-none { font-weight: 600; }
+[hidden].rrt-help-topic,
+.rrt-help-toc li[hidden] { display: none; }
+.rrt-help-group h3 { margin: 1.4em 0 0.5em; font-size: 14px; }
+.rrt-help-group h3:focus,
+.rrt-help-part:focus { outline: 2px solid #2271b1; outline-offset: 2px; }
+.rrt-help-group[hidden] { display: none; }
+.rrt-help-topic h3.rrt-help-part { margin: 1.5em 0 0.4em; font-size: 14px; }
+.rrt-help-links { list-style: none !important; margin-left: 0 !important; }
+.rrt-help-links a { font-weight: 600; }
+.rrt-help-links .rrt-help-intro { color: #50575e; font-style: normal; }
+.rrt-help-part-link { margin: -0.4em 0 0.8em; font-size: 12px; }

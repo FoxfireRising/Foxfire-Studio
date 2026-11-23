@@ -1,0 +1,20 @@
+name: An idea
+description: Something Foxfire Studio could do, or do better.
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are welcome. [ROADMAP.md](https://github.com/FoxfireRising/Foxfire-Studio/blob/main/ROADMAP.md) has what is already planned. Please leave out your site's address and anything personal.
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What you would like it to do.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What it would help with
+      description: The reading, recording or listening you have in mind.

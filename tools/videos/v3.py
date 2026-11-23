@@ -1,0 +1,41 @@
+"""Video 3: edit by editing the script."""
+from playwright.sync_api import sync_playwright
+from common import *
+from review_common import open_take
+from rec import Recorder, render
+import pointer as P
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'docs', 'media')
+with sync_playwright() as p:
+	b, ctx, page, box = launch(p)
+	page.goto(TP, wait_until='load'); page.wait_for_timeout(1500)
+	page.click('#tpPanelClose'); page.wait_for_timeout(500)
+	wav = open_take(page, box); page.set_input_files('#tpFile', wav)
+	page.wait_for_selector('#tpRvScript [data-ti]', timeout=120000); page.wait_for_timeout(1500)
+	P.park(page, 1240, 600)
+	r = Recorder(page, '/tmp/v3'); r.start()
+	r.say('In the review, turn on Edit audio. Now the script edits the recording.')
+	r.hold(1.5)
+	P.click(page, '#tpEdToggle', after=1500)
+	r.say('Tidy suggests cuts: fillers, repeats, and pauses longer than a second and a half.')
+	P.click(page, '#tpEdTidy', after=600)
+	page.wait_for_selector('#tpEdTidyBox:not([hidden])', timeout=5000)
+	r.hold(3.5)
+	r.say('Keep the ones you agree with and apply them.')
+	P.click(page, '#tpEdTidyApply', after=2500)
+	r.say('To cut anything else, select the words and press Cut.')
+	P.click(page, '#tpRvScript [data-ti]:text-is("Far")', after=300)
+	page.keyboard.down('Shift')
+	P.click(page, '#tpRvScript [data-ti]:text-is("below,")', after=300)
+	page.keyboard.up('Shift')
+	r.hold(1)
+	P.click(page, '#tpEdCut', after=2200)
+	r.say('Cuts join in the quiet between words. Undo steps back, and the original stays safe.')
+	P.move(page, '#tpEdUndo'); r.hold(3.5)
+	r.say('Make edited MP3 builds the new file, with captions and chapters moved to match.')
+	P.click(page, '#tpEdMake', after=300)
+	page.wait_for_function("/^Edited MP3 ready/.test(document.getElementById('tpEdStatus').textContent)", timeout=90000)
+	P.move(page, '#tpEdStatus'); r.hold(3.5)
+	r.stop()
+	render(r, OUT + '/edit.mp4', poster=OUT + '/edit.jpg', poster_at=10)
+	b.close()
+print('done')

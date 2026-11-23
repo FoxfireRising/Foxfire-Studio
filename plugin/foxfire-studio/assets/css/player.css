@@ -1,0 +1,524 @@
+/*
+ * Foxfire Studio: the listening player on public posts.
+ * Colours and fonts come from --rrt-* tokens printed by the plugin.
+ * Written for strict CSS minifiers in caching plugins: no slashes inside values.
+ */
+.rrt-player {
+	--rrt-r: 999px;
+	box-sizing: border-box;
+	margin: 0 0 1.6em;
+	padding: 8px 18px 8px 8px;
+	/* Solid (1.26.0), so the colours checked in Settings are the colours shown, on any theme. */
+	background: var(--rrt-panel);
+	border: 1px solid color-mix(in srgb, var(--rrt-accent) 35%, var(--rrt-panel));
+	border-radius: 28px;
+	color: var(--rrt-muted);
+	font-family: var(--rrt-font-ui);
+	font-size: 14px;
+	line-height: 1.4;
+	text-align: left;
+}
+.rrt-player:not(:first-child) { margin-top: 1.2em; }
+.rrt-player *,
+.rrt-player *::before,
+.rrt-player *::after { box-sizing: border-box; }
+
+/* Until the script is ready, the browser's own player is shown. */
+.rrt-player .rrt-audio { display: block; width: 100%; }
+.rrt-player .rrt-row,
+.rrt-player .rrt-transcript { display: none; }
+.rrt-player.is-ready .rrt-audio { display: none; }
+.rrt-player.is-ready .rrt-row { display: flex; }
+.rrt-player.is-ready .rrt-transcript:not([hidden]) { display: block; }
+
+.rrt-row {
+	align-items: center;
+	gap: 14px;
+}
+.rrt-tools {
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 6px 0 2px 56px;
+}
+
+.rrt-play {
+	flex: none;
+	width: 42px;
+	height: 42px;
+	padding: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--rrt-bg);
+	border: 1px solid var(--rrt-accent);
+	border-radius: 50%;
+	color: var(--rrt-accent);
+	cursor: pointer;
+	transition: box-shadow 0.2s ease, background 0.2s ease;
+}
+.rrt-play:hover { box-shadow: 0 0 14px color-mix(in srgb, var(--rrt-accent) 45%, transparent); }
+.rrt-play svg { width: 20px; height: 20px; fill: currentColor; }
+.rrt-play .rrt-i-pause { display: none; }
+.rrt-player.is-playing .rrt-play .rrt-i-play { display: none; }
+.rrt-player.is-playing .rrt-play .rrt-i-pause { display: block; }
+
+.rrt-main { flex: 1; min-width: 0; }
+.rrt-label {
+	font-family: var(--rrt-font-read);
+	font-style: italic;
+	font-size: 17px;
+	color: var(--rrt-muted);
+	margin-bottom: 6px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/* The "read by" credit (0.22.0), quietly under the label. */
+.rrt-credit {
+	font-size: 13px;
+	color: var(--rrt-muted);
+	margin: -3px 0 7px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.rrt-track {
+	position: relative;
+	height: 6px;
+	border-radius: var(--rrt-r);
+	/* The unplayed part in the hint colour, which the Settings check holds at 4.5 to 1 on the panel (1.26.0). */
+	background: var(--rrt-faint);
+	cursor: pointer;
+	outline: none;
+}
+.rrt-track::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -9px;
+	bottom: -9px;
+}
+.rrt-track:focus-visible { outline: 2px solid var(--rrt-accent); outline-offset: 5px; }
+.rrt-fill {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 0;
+	border-radius: var(--rrt-r);
+	background: linear-gradient(90deg, var(--rrt-accent2), var(--rrt-accent));
+}
+.rrt-fill::after {
+	content: "";
+	position: absolute;
+	right: -7px;
+	top: -4px;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: var(--rrt-accent);
+	box-shadow: 0 0 0 2px var(--rrt-panel);
+}
+
+.rrt-time {
+	flex: none;
+	font-family: var(--rrt-font-read);
+	font-size: 15px;
+	color: var(--rrt-faint);
+	font-variant-numeric: tabular-nums;
+}
+.rrt-sep { color: var(--rrt-faint); }
+
+.rrt-btn {
+	display: inline-flex;
+	align-items: center;
+	padding: 3px 12px;
+	background: transparent;
+	border: 1px solid color-mix(in srgb, var(--rrt-accent) 45%, transparent);
+	border-radius: var(--rrt-r);
+	color: var(--rrt-accent);
+	font: inherit;
+	font-size: 13px;
+	line-height: 1.6;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+.rrt-btn:hover,
+.rrt-btn:focus-visible { background: color-mix(in srgb, var(--rrt-accent) 14%, var(--rrt-panel)); color: var(--rrt-text); }
+/* A clear ring on every control that has focus (1.26.0). */
+.rrt-player .rrt-play:focus-visible,
+.rrt-player .rrt-btn:focus-visible,
+.rrt-player .rrt-chapters button:focus-visible,
+.rrt-player .rrt-transcript button:focus-visible { outline: 2px solid var(--rrt-accent); outline-offset: 2px; }
+.rrt-btn[aria-pressed="true"] { background: var(--rrt-accent); color: var(--rrt-bg); border-color: var(--rrt-accent); }
+.rrt-btn[hidden] { display: none; }
+.rrt-resume { border-style: dashed; }
+
+/* Chapters (0.7.0): notches on the progress bar, a list, and the current chapter beside the label. */
+.rrt-tick {
+	position: absolute;
+	top: -2px;
+	bottom: -2px;
+	width: 2px;
+	margin-left: -1px;
+	background: var(--rrt-bg);
+	pointer-events: none;
+}
+.rrt-chap-now { font-style: normal; color: var(--rrt-text); }
+.rrt-chap-now:not(:empty)::before { content: "\00A0\00B7\00A0"; color: var(--rrt-muted); }
+.rrt-chapters {
+	list-style: none;
+	margin: 10px 0 4px 56px;
+	padding: 0;
+	font-family: var(--rrt-font-read);
+	font-size: 17px;
+	line-height: 1.5;
+}
+.rrt-chapters[hidden] { display: none; }
+.rrt-chapters li { margin: 0; padding: 0; }
+.rrt-chap-time {
+	display: inline-block;
+	min-width: 3.2em;
+	color: var(--rrt-faint);
+	font-variant-numeric: tabular-nums;
+}
+
+/* Transcript, shown when the post text cannot be followed directly. */
+.rrt-transcript {
+	list-style: none;
+	margin: 12px 0 6px 56px;
+	padding: 0;
+	max-height: 260px;
+	overflow-y: auto;
+	font-family: var(--rrt-font-read);
+	font-size: 17px;
+	line-height: 1.6;
+}
+.rrt-transcript li { margin: 0; padding: 0; }
+.rrt-transcript li.rrt-transcript-none { padding: 2px 8px; color: var(--rrt-muted); }
+.rrt-line-time {
+	display: inline-block;
+	min-width: 3.2em;
+	color: var(--rrt-faint);
+	font-variant-numeric: tabular-nums;
+}
+
+/*
+ * Read along in the post itself (1.26.0): the post keeps its own colours.
+ * The sentence being read gets a soft tint, and the word being read a
+ * stronger one with an underline, so neither needs colour to be seen.
+ */
+.rrt-follow-root .rrt-fw { border-radius: 3px; transition: background 0.2s ease; cursor: pointer; }
+.rrt-follow-root.is-following .rrt-fw.rrt-cue { background: color-mix(in srgb, var(--rrt-accent) 16%, transparent); }
+.rrt-follow-root.is-following .rrt-fw.rrt-now {
+	background: color-mix(in srgb, var(--rrt-accent) 30%, transparent);
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.2em;
+}
+
+/* Words for screen readers only. */
+.rrt-player .rrt-sr {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+.rrt-player { position: relative; }
+
+/*
+ * Theme guard. Many themes style every button (a solid colour, capitals,
+ * letter spacing, a minimum height). These repeat the player's own button
+ * look with a stronger selector so the theme cannot win.
+ */
+.rrt-player.rrt-player button {
+	min-height: 0;
+	margin: 0;
+	box-shadow: none;
+	text-transform: none;
+	letter-spacing: normal;
+	font-weight: normal;
+	text-shadow: none;
+}
+.rrt-player.rrt-player button.rrt-play,
+.rrt-player.rrt-player button.rrt-play:focus {
+	padding: 0;
+	background: var(--rrt-bg);
+	border: 1px solid var(--rrt-accent);
+	border-radius: 50%;
+	color: var(--rrt-accent);
+}
+.rrt-player.rrt-player button.rrt-play:hover,
+.rrt-player.rrt-player button.rrt-play:focus-visible {
+	background: var(--rrt-bg);
+	color: var(--rrt-accent);
+	box-shadow: 0 0 14px color-mix(in srgb, var(--rrt-accent) 45%, transparent);
+}
+.rrt-player.rrt-player button.rrt-play:focus-visible,
+.rrt-player.rrt-player button.rrt-btn:focus-visible { outline: 2px solid var(--rrt-accent); outline-offset: 2px; }
+.rrt-player.rrt-player button.rrt-btn,
+.rrt-player.rrt-player button.rrt-btn:focus {
+	padding: 3px 12px;
+	background: transparent;
+	border: 1px solid color-mix(in srgb, var(--rrt-accent) 45%, transparent);
+	border-radius: var(--rrt-r);
+	color: var(--rrt-accent);
+	font-family: inherit;
+	font-size: 13px;
+	line-height: 1.6;
+}
+.rrt-player.rrt-player button.rrt-btn:hover,
+.rrt-player.rrt-player button.rrt-btn:focus-visible {
+	background: color-mix(in srgb, var(--rrt-accent) 14%, var(--rrt-panel));
+	color: var(--rrt-text);
+}
+.rrt-player.rrt-player button.rrt-btn[aria-pressed="true"] {
+	background: var(--rrt-accent);
+	border-color: var(--rrt-accent);
+	color: var(--rrt-bg);
+}
+.rrt-player.rrt-player .rrt-resume { border-style: dashed; }
+.rrt-player.rrt-player button[hidden] { display: none; }
+.rrt-player.rrt-player .rrt-chapters button,
+.rrt-player.rrt-player .rrt-chapters button:focus,
+.rrt-player.rrt-player .rrt-transcript button,
+.rrt-player.rrt-player .rrt-transcript button:focus {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 3px 8px;
+	background: transparent;
+	border: 0;
+	border-radius: 6px;
+	box-shadow: none;
+	color: var(--rrt-muted);
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: normal;
+	line-height: inherit;
+	text-align: left;
+	text-transform: none;
+	letter-spacing: normal;
+	cursor: pointer;
+}
+.rrt-player.rrt-player .rrt-chapters button:hover,
+.rrt-player.rrt-player .rrt-chapters button:focus-visible,
+.rrt-player.rrt-player .rrt-transcript button:hover,
+.rrt-player.rrt-player .rrt-transcript button:focus-visible {
+	background: color-mix(in srgb, var(--rrt-accent) 8%, var(--rrt-panel));
+	color: var(--rrt-text);
+}
+.rrt-player.rrt-player .rrt-chapters button:focus-visible,
+.rrt-player.rrt-player .rrt-transcript button:focus-visible { outline: 2px solid var(--rrt-accent); outline-offset: 2px; }
+.rrt-player.rrt-player .rrt-chapters button[aria-current],
+.rrt-player.rrt-player .rrt-transcript button[aria-current] {
+	background: color-mix(in srgb, var(--rrt-accent) 14%, var(--rrt-panel));
+	color: var(--rrt-text);
+}
+/* On a tinted line the times take the label colour, which stays readable there. */
+.rrt-player.rrt-player .rrt-chapters button[aria-current] .rrt-chap-time,
+.rrt-player.rrt-player .rrt-transcript button[aria-current] .rrt-line-time,
+.rrt-player.rrt-player .rrt-chapters button:hover .rrt-chap-time,
+.rrt-player.rrt-player .rrt-transcript button:hover .rrt-line-time,
+.rrt-player.rrt-player .rrt-chapters button:focus-visible .rrt-chap-time,
+.rrt-player.rrt-player .rrt-transcript button:focus-visible .rrt-line-time { color: var(--rrt-muted); }
+
+/* The block's preview in the editor (1.28.0): the player as visitors see it, silent there. */
+.rrt-block-preview .rrt-player .rrt-audio { display: none; }
+.rrt-block-preview .rrt-player .rrt-row { display: flex; }
+.rrt-block-preview { pointer-events: none; }
+.rrt-block-note,
+.rrt-block-off { margin: 6px 0 0; font-size: 12px; font-style: italic; opacity: 0.75; }
+.rrt-block-off { margin: 0 0 6px; }
+.rrt-block-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start; width: 100%; }
+.rrt-block-actions .components-combobox-control { flex: 1 1 260px; }
+.rrt-block-wait { padding: 12px; }
+
+.rrt-preview-note {
+	margin: 0 0 6px;
+	font-size: 12px;
+	font-style: italic;
+	opacity: 0.7;
+}
+
+@media (max-width: 560px) {
+	.rrt-player { padding: 8px 12px 8px 8px; border-radius: 22px; }
+	.rrt-row { gap: 10px; }
+	.rrt-label { font-size: 15px; }
+	.rrt-time { font-size: 13px; }
+	.rrt-sep,
+	.rrt-len { display: none; }
+	.rrt-tools,
+	.rrt-chapters,
+	.rrt-transcript { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+	.rrt-player *,
+	.rrt-follow-root .rrt-fw { transition: none; }
+}
+
+/* A collection's list of readings (1.19.0): plain, so it takes the theme's own type and colours. */
+.rrt-col-list ol { padding-left: 1.4em; }
+.rrt-col-list li { margin: 0.35em 0; }
+.rrt-col-list .rrt-col-play {
+	font: inherit;
+	line-height: 1;
+	padding: 0.25em 0.5em;
+	margin-right: 0.35em;
+	border: 1px solid currentColor;
+	border-radius: 999px;
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+	opacity: 0.85;
+}
+.rrt-col-list .rrt-col-play:hover,
+.rrt-col-list .rrt-col-play:focus-visible { opacity: 1; }
+.rrt-col-list .rrt-col-at,
+.rrt-col-list .rrt-col-len { opacity: 0.7; font-size: 0.9em; }
+
+/* A reading for members (1.21.0), for a visitor who cannot hear it. */
+.rrt-player.rrt-locked .rrt-lock { cursor: default; }
+.rrt-player.rrt-locked .rrt-lock:hover { box-shadow: none; }
+.rrt-player.rrt-locked .rrt-locked-msg { color: var(--rrt-text); margin-top: 2px; }
+.rrt-player.rrt-locked .rrt-locked-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 4px; }
+.rrt-player.rrt-locked .rrt-locked-links a { color: var(--rrt-accent); text-decoration: underline; }
+
+/* Sponsor messages (1.22.0): the thank-you line under the player, when it is switched on. */
+.rrt-sponsor-line { font-size: 0.9em; opacity: 0.85; margin: 0.4em 0 1em; }
+
+/* YouTube and SoundCloud players that load on play (1.35.0): the panel takes the player's place and size until play is pressed. */
+.rrt-embed {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	max-width: 100%;
+	margin: 0;
+	overflow: hidden;
+	background: var(--rrt-panel);
+	color: var(--rrt-text);
+	font-family: var(--rrt-font-ui);
+	font-size: 15px;
+	line-height: 1.3;
+}
+.rrt-embed-go {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	text-align: left;
+	text-decoration: none;
+	cursor: pointer;
+}
+.rrt-embed-go:focus-visible { outline: 3px solid var(--rrt-accent); outline-offset: -3px; }
+/* Three classes and the tag, so a theme's rule for pictures in a post's text (often two classes and img, with height: auto) cannot change the picture's size. */
+.rrt-embed .rrt-embed-go img.rrt-embed-pic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	max-width: none;
+	max-height: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-shadow: none;
+	object-fit: cover;
+	border-radius: 0;
+}
+.rrt-embed-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 68px;
+	height: 68px;
+	margin: -34px 0 0 -34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	border: 2px solid var(--rrt-accent);
+	border-radius: 50%;
+	background: var(--rrt-bg);
+	color: var(--rrt-accent);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.rrt-embed-btn svg { width: 30px; height: 30px; margin-left: 4px; fill: currentColor; }
+.rrt-embed-go:hover .rrt-embed-btn,
+.rrt-embed-go:focus-visible .rrt-embed-btn { box-shadow: 0 0 18px color-mix(in srgb, var(--rrt-accent) 60%, transparent); transform: scale(1.06); }
+.rrt-embed-cap {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	padding: 8px 12px;
+	background: var(--rrt-panel);
+}
+.rrt-embed-title { color: var(--rrt-text); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rrt-embed-from { color: var(--rrt-muted); font-size: 0.85em; }
+.rrt-embed-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.rrt-embed.is-nopic .rrt-embed-btn { top: 40%; }
+
+/* A SoundCloud track: the picture on the left, the button and the title beside it, as SoundCloud's own player sits. */
+.rrt-embed-sc.is-wide .rrt-embed-go { display: flex; align-items: center; }
+.rrt-embed-sc.is-wide .rrt-embed-go img.rrt-embed-pic { position: static; flex: none; width: auto; height: 100%; aspect-ratio: 1; }
+.rrt-embed-sc.is-wide .rrt-embed-btn { position: static; flex: none; width: 56px; height: 56px; margin: 0 14px 0 16px; }
+.rrt-embed-sc.is-wide .rrt-embed-btn svg { width: 24px; height: 24px; margin-left: 3px; }
+.rrt-embed-sc.is-wide .rrt-embed-cap { position: static; flex: 1 1 auto; min-width: 0; padding: 0 14px 0 0; background: transparent; }
+.rrt-embed-sc.is-wide .rrt-embed-title { white-space: normal; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; }
+
+/* The real player, once play is pressed, in exactly the panel's box. */
+.rrt-embed.is-loaded { background: #000; }
+.rrt-embed .rrt-embed-frame {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	max-width: none;
+	margin: 0;
+	border: 0;
+}
+
+/* Inside an Embed block that keeps its own shape (themes with responsive embeds), the panel fills it, as the player would. */
+.wp-embed-responsive .wp-has-aspect-ratio .wp-block-embed__wrapper > .rrt-embed {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+	aspect-ratio: auto !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.rrt-embed-btn { transition: none; }
+	.rrt-embed-go:hover .rrt-embed-btn,
+	.rrt-embed-go:focus-visible .rrt-embed-btn { transform: none; }
+}

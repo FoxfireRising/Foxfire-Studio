@@ -1,0 +1,65 @@
+/* Foxfire Studio: the Readings in this collection box (1.19.0). */
+#rrt-collection .rrt-small { color: #50575e; font-size: 12px; }
+.rrt-col-rows { margin: 8px 0 12px; padding: 0; list-style: none; counter-reset: rrtcol; }
+.rrt-col-row {
+	counter-increment: rrtcol;
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 8px 10px;
+	margin: 0 0 6px;
+}
+.rrt-col-row.is-format { border-left: 4px solid #b32d2e; }
+.rrt-col-row.is-level { border-left: 4px solid #dba617; }
+.rrt-col-row.is-gone,
+.rrt-col-row.is-unpublished,
+.rrt-col-row.is-none,
+.rrt-col-row.is-away { opacity: 0.75; border-style: dashed; }
+.rrt-col-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.rrt-col-top::before { content: counter(rrtcol) "."; color: #787c82; min-width: 1.4em; }
+.rrt-col-grip { cursor: grab; color: #787c82; font-size: 16px; line-height: 1; }
+.rrt-col-name { font-weight: 600; }
+.rrt-col-facts { color: #50575e; font-size: 12px; }
+.rrt-col-tools { margin-left: auto; display: flex; gap: 8px; }
+.rrt-col-tools .button-link:disabled { color: #a7aaad; cursor: default; }
+.rrt-col-remove { color: #b32d2e; }
+.rrt-col-note { margin: 4px 0 0; color: #50575e; }
+.rrt-col-matchline { margin: 6px 0 0; }
+.rrt-col-add { margin: 12px 0; }
+.rrt-col-results { margin: 6px 0 0; padding: 0; list-style: none; max-height: 220px; overflow: auto; }
+.rrt-col-results li { padding: 3px 0; }
+.rrt-col-summary { font-weight: 600; }
+.rrt-col-unsaved { color: #8a6100; }
+.rrt-col-built { margin: 10px 0; }
+.rrt-col-audio { width: 100%; max-width: 560px; margin: 4px 0; display: block; }
+.rrt-col-error { color: #b32d2e; }
+.rrt-col-msg { min-height: 1.4em; }
+.rrt-col-msg.is-bad { color: #b32d2e; }
+.rrt-col-options { border-top: 1px solid #f0f0f1; margin-top: 12px; padding-top: 4px; }
+.rrt-col-options label { font-weight: 600; }
+.rrt-col-options input[type="checkbox"] + * { font-weight: 400; }
+
+/* Foxfire Studio: the Audiobook box (1.20.0). */
+#rrt-audiobook .rrt-small { color: #50575e; font-size: 12px; }
+.rrt-book-h { margin: 16px 0 6px; font-size: 13px; }
+.rrt-book-rows { margin: 6px 0 10px; padding: 0; list-style: none; counter-reset: rrtbook; }
+.rrt-book-row { counter-increment: rrtbook; background: #fff; border: 1px solid #dcdcde; border-left-width: 4px; border-radius: 4px; padding: 8px 10px; margin: 0 0 6px; }
+.rrt-book-row::before { content: counter(rrtbook) ". "; color: #787c82; }
+.rrt-book-row.is-book { border-left-color: #00a32a; }
+.rrt-book-row.is-post { border-left-color: #dba617; }
+.rrt-book-row.is-need { border-left-color: #b32d2e; }
+.rrt-book-note { margin: 4px 0 0; color: #50575e; }
+.rrt-book-script { width: 100%; max-width: 560px; display: block; }
+.rrt-book-credit { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.rrt-book-ok { color: #00733a; }
+.rrt-book-todo { color: #8a6100; }
+.rrt-book-audio { max-width: 320px; height: 32px; }
+.rrt-book-warn { color: #8a6100; }
+.rrt-book-bar { width: 100%; max-width: 560px; display: block; }
+.rrt-book-msg { min-height: 1.4em; }
+.rrt-book-msg.is-bad { color: #b32d2e; }
+.rrt-book-table { max-width: 860px; margin: 0 0 12px; }
+.rrt-book-table tr.is-bad td { color: #b32d2e; }
+.rrt-book-table tr.is-ok .rrt-book-mark { color: #00733a; }
+.rrt-book-mark { width: 1.5em; font-weight: 600; }
+.rrt-book-file { margin: 12px 0 4px; }

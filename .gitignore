@@ -1,0 +1,32 @@
+# Recordings and audio never belong in the repo
+*.mp3
+*.m4a
+*.wav
+*.webm
+*.ogg
+*.flac
+
+# Whisper model and runtime files (downloaded by Settings or tools/whisper-setup.sh)
+rrt-whisper/
+gw-whisper/
+*.onnx
+*.wasm
+# ...except voice following's engine, which ships with the plugin (1.14.0; see its README.txt)
+!plugin/foxfire-studio/assets/vendor/sherpa-onnx/*.wasm
+# ...and the stronger cleanup's model, which ships with the plugin (1.16.0; see its README.txt)
+!plugin/foxfire-studio/assets/vendor/deepfilternet3/*.onnx
+
+# Build output
+*.zip
+dist/
+node_modules/
+
+# Local and system files
+.DS_Store
+Thumbs.db
+*.log
+.env
+
+# Python bytecode from running the tests
+__pycache__/
+*.pyc

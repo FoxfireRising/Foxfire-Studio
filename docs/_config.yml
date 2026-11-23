@@ -1,0 +1,27 @@
+# The docs site on GitHub Pages, built from this folder (main, /docs).
+# The guides in guide/ are written by tools/help-export.php; change them there.
+title: Foxfire Studio
+description: A teleprompter and recording studio inside WordPress.
+lang: en
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+relative_links:
+  enabled: true
+  collections: false
+titles_from_headings:
+  enabled: true
+  strip_title: false
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+# The developer documents stay on GitHub, off the site.
+exclude:
+  - DESIGN.md
+  - RESEARCH.md
+  - ARCHITECTURE.md
+  - ANALYTICS-SPEC.md

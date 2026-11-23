@@ -1,0 +1,50 @@
+name: Something is not working
+description: Tell us what went wrong, so it can be fixed.
+labels: ["problem"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time. Please **leave out your site's address, recordings, and anything personal** (names, email addresses, screenshots showing them). A description is enough.
+        A security problem? Please report it privately instead: the **Security** tab, then **Report a vulnerability**.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen again
+      description: The steps, if you know them.
+      placeholder: |
+        1. Open the studio on a post
+        2. Press Begin
+        3. ...
+  - type: input
+    id: plugin
+    attributes:
+      label: Foxfire Studio version
+      description: Plugins screen, under the plugin's name.
+      placeholder: "1.36.1"
+    validations:
+      required: true
+  - type: input
+    id: wp
+    attributes:
+      label: WordPress and PHP versions
+      description: Tools, then Site Health, then Info.
+      placeholder: "WordPress 6.8, PHP 8.2"
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      description: For anything in the studio, the player, clips or videos. Settings shows a This browser line you can copy.
+      placeholder: "Chrome on a Windows laptop, Safari on an iPhone"
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else
+      description: Error messages, or a line from the browser's console. Check there is nothing personal in it first.

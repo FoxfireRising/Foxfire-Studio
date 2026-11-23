@@ -1,0 +1,127 @@
+/*
+ * Foxfire Studio: a shared take (0.17.0). Colours and fonts come from the
+ * same tokens as the teleprompter (see includes/settings.php).
+ */
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body.sh {
+	background: var(--bg);
+	color: var(--text);
+	font-family: var(--font-ui);
+	font-size: 15px;
+	line-height: 1.5;
+	min-height: 100vh;
+}
+.sh-muted { color: var(--faint); }
+
+/* The list page and the not-available page */
+.sh-list { max-width: 720px; margin: 0 auto; padding: 48px 16px; }
+.sh-list h1 { font-family: var(--font-head); color: var(--accent); font-weight: 400; margin: 0 0 18px; }
+.sh-list ul { list-style: none; margin: 0; padding: 0; }
+.sh-list li { padding: 12px 0; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+.sh-list a { color: var(--text); font-family: var(--font-read); font-size: 20px; text-decoration-color: color-mix(in srgb, var(--accent) 50%, transparent); }
+
+/* Heading and player */
+.sh-head {
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	padding: 16px clamp(16px, 4vw, 40px) 12px;
+	background: color-mix(in srgb, var(--panel) 96%, transparent);
+	border-bottom: 1px solid var(--line);
+}
+.sh-top { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.sh-brand { font-family: var(--font-head); color: var(--accent); font-size: 15px; letter-spacing: 0.04em; }
+.sh-top h1 { margin: 0; font-family: var(--font-read); font-weight: 500; font-size: clamp(20px, 3vw, 28px); }
+.sh-sub { margin: 4px 0 10px; color: var(--muted); font-size: 13px; }
+.sh-head audio { width: 100%; }
+.sh-head audio[hidden] { display: none; }
+.sh-msg { margin: 6px 0 0; color: var(--accent); font-size: 13px; }
+.sh-msg:empty { display: none; }
+
+/* Script and side panel */
+.sh-body {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 360px;
+	gap: 0;
+	align-items: start;
+}
+.sh-script {
+	padding: 28px clamp(16px, 5vw, 64px) 40vh;
+	font-family: var(--font-read);
+	font-size: 23px;
+	line-height: 1.8;
+}
+.sh-p { max-width: 920px; margin: 0 auto 1em; color: var(--muted); }
+.sh-p.sh-title { font-family: var(--font-head); font-size: 26px; text-align: center; color: var(--text); }
+.sh-p.sh-h { font-family: var(--font-head); font-size: 20px; margin-top: 1.4em; }
+.sh-w { cursor: pointer; border-radius: 4px; transition: color 0.15s ease, background 0.15s ease; }
+.sh-w:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+.sh-w.is-said { color: var(--text); }
+.sh-w.is-now { color: var(--accent); }
+.sh-w.is-unheard { opacity: 0.6; }
+.sh-w.has-note { border-bottom: 2px solid color-mix(in srgb, var(--accent) 70%, transparent); }
+.sh-w.is-target { background: color-mix(in srgb, var(--accent) 25%, transparent); color: var(--text); }
+
+.sh-side {
+	position: sticky;
+	top: 150px;
+	max-height: calc(100vh - 160px);
+	overflow-y: auto;
+	padding: 20px 20px 40px;
+	border-left: 1px solid var(--line);
+}
+.sh-side h2 { font-family: var(--font-head); font-weight: 400; color: var(--accent); font-size: 16px; margin: 0 0 10px; }
+.sh-form { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.sh-form[hidden] { display: none; }
+.sh-at { margin: 0; color: var(--muted); font-size: 13px; min-height: 1.5em; }
+.sh-form textarea,
+.sh-form input[type="text"] {
+	width: 100%;
+	background: var(--bg);
+	color: var(--text);
+	border: 1px solid color-mix(in srgb, var(--muted) 30%, transparent);
+	border-radius: 6px;
+	padding: 8px 10px;
+	font: inherit;
+	font-size: 14px;
+}
+.sh-form textarea { resize: vertical; }
+.sh-form textarea:focus,
+.sh-form input[type="text"]:focus { outline: none; border-color: var(--accent); }
+.sh-name { display: flex; flex-direction: column; gap: 4px; color: var(--muted); font-size: 12px; }
+.sh-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+.sh-row[hidden] { display: none; }
+.sh-btn {
+	background: transparent;
+	color: var(--accent);
+	border: 1px solid color-mix(in srgb, var(--accent) 50%, transparent);
+	border-radius: 999px;
+	padding: 7px 16px;
+	font: inherit;
+	font-size: 13px;
+	letter-spacing: 0.04em;
+	cursor: pointer;
+}
+.sh-btn:hover { background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--text); }
+.sh-btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 500; }
+.sh-btn.primary:hover { background: var(--text); border-color: var(--text); }
+.sh-btn.danger { color: #e69a9a; border-color: rgba(230, 154, 154, 0.5); }
+.sh-btn:disabled { opacity: 0.5; cursor: default; }
+
+.sh-notes { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.sh-note { padding: 10px 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+.sh-note-head { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; background: none; border: 0; padding: 0; color: inherit; font: inherit; cursor: pointer; text-align: left; }
+.sh-note-time { color: var(--accent); font-variant-numeric: tabular-nums; font-size: 13px; }
+.sh-note-word { color: var(--muted); font-family: var(--font-read); font-size: 15px; }
+.sh-note-name { color: var(--faint); font-size: 12px; }
+.sh-note-text { margin: 6px 0 0; white-space: pre-wrap; font-size: 14px; }
+.sh-note-x { margin-top: 6px; background: none; border: 0; padding: 0; color: var(--faint); font: inherit; font-size: 12px; cursor: pointer; text-decoration: underline; }
+.sh-help { font-size: 12px; margin-top: 16px; }
+
+@media (max-width: 860px) {
+	.sh-body { grid-template-columns: minmax(0, 1fr); }
+	.sh-side { position: static; max-height: none; border-left: 0; border-bottom: 1px solid var(--line); order: -1; }
+	.sh-script { padding-bottom: 24px; font-size: 20px; }
+	.sh-head { position: sticky; }
+}

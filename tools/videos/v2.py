@@ -1,0 +1,40 @@
+"""Video 2: read the review."""
+from playwright.sync_api import sync_playwright
+from common import *
+from review_common import open_take
+from rec import Recorder, render
+import pointer as P
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'docs', 'media')
+with sync_playwright() as p:
+	b, ctx, page, box = launch(p)
+	page.goto(TP, wait_until='load'); page.wait_for_timeout(1500)
+	page.click('#tpPanelClose'); page.wait_for_timeout(500)
+	wav = open_take(page, box)
+	P.park(page, 700, 560)
+	r = Recorder(page, '/tmp/v2'); r.start()
+	r.say('After a take, or with Open a recording, Whisper listens back on your own computer.')
+	P.move(page, 'button:has-text("Open a recording")'); r.hold(1.5)
+	page.evaluate('vidPulse()'); r.hold(0.3)
+	page.set_input_files('#tpFile', wav)
+	page.wait_for_selector('#tpRvScript [data-ti]', timeout=120000)
+	P.park(page, 1240, 600)
+	r.hold(1)
+	r.say('The review compares what you said with the script, word by word.')
+	r.hold(4)
+	r.say('A skipped word is struck through, a filler is marked, and a misheard word is underlined.')
+	P.move(page, '#tpRvScript .st-omit'); r.hold(1.6)
+	P.move(page, '#tpRvScript .k-filler'); r.hold(1.6)
+	P.move(page, '#tpRvScript .st-sub'); r.hold(1.8)
+	r.say('Click any word to hear that moment of the recording.')
+	P.click(page, '#tpRvScript .st-sub', after=2500)
+	r.say('The timeline along the top shows your pace, with every flag on it.')
+	P.move(page, '#tpRvTimeline'); r.hold(3.5)
+	r.say('Each paragraph gets a score, and long pauses show how long they were.')
+	P.move(page, '#tpRvScript .tp-rv-pause'); r.hold(3.5)
+	r.say('The tiles count each kind of slip. Click one to see just those moments.')
+	page.evaluate("() => { var s = document.scrollingElement; var el = document.getElementById('tpRvStats'); el && el.scrollIntoView({behavior:'smooth', block:'center'}); }")
+	P.click(page, '#tpRvStats .tp-rv-tile[data-filter="filler"]', after=3500)
+	r.stop()
+	render(r, OUT + '/review.mp4', poster=OUT + '/review.jpg', poster_at=12)
+	b.close()
+print('done')
