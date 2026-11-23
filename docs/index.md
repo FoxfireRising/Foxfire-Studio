@@ -9,7 +9,7 @@ title: Foxfire Studio
 <a class="button" href="https://github.com/FoxfireRising/Foxfire-Studio/releases/latest">Download the latest release</a>
 <a class="button quiet" href="videos.html">Watch the short videos</a>
 
-[![The studio: a post shown as a script, with the words already read lit and the next word in gold](media/studio.jpg)](videos.md)
+[![The studio: a post shown as a script, with the words already read lit and the next word in gold](media/studio.jpg)](videos.html)
 
 ## Where to start
 
