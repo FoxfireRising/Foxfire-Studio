@@ -157,6 +157,9 @@ $WP eval-file tests/php/shelf.php
 echo "== YouTube and SoundCloud players that load on play (1.35.0), on the server"
 $WP eval-file tests/php/embeds.php
 
+echo "== Readings of deleted posts (1.36.2), on the server"
+$WP eval-file tests/php/tidy.php
+
 echo "== Browser smoke test"
 SERVER=""
 if ! curl -s -o /dev/null "http://localhost:$PORT/"; then
@@ -292,6 +295,16 @@ EM_SEED="$WP_DIR/embeds.json" python3 tests/browser/embeds.py "http://localhost:
 T=$?
 set -e
 $WP eval-file tests/wp/embeds.php off > /dev/null
+[ $T -eq 0 ] || exit $T
+
+echo "== Readings of deleted posts (1.36.2)"
+# A live post with a replaced reading and a current one, and a post in the Trash with its reading.
+$WP eval-file tests/wp/tidy.php > "$WP_DIR/tidy.json"
+set +e
+TD_SEED="$WP_DIR/tidy.json" python3 tests/browser/tidy.py "http://localhost:$PORT"
+T=$?
+set -e
+$WP eval-file tests/wp/tidy.php off > /dev/null
 [ $T -eq 0 ] || exit $T
 
 echo "== Prompter view"

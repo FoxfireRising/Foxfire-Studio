@@ -3,7 +3,7 @@
  * Plugin Name:       Foxfire Studio
  * Plugin URI:        https://github.com/FoxfireRising/Foxfire-Studio
  * Description:       A private studio for reading your posts aloud: a teleprompter that follows your voice, recording with podcast-ready MP3s, a Whisper review of your delivery, text-based editing, a listening player for visitors, a dashboard, a report by email, and captioned clips for social media. Formerly Reading Room Teleprompter. Open it from Tools, then Teleprompter, or from the Foxfire Studio menu.
- * Version:           1.36.1
+ * Version:           1.36.2
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            FoxfireRising
@@ -42,7 +42,7 @@ if ( defined( 'RRT_VERSION' ) ) {
 	return;
 }
 
-define( 'RRT_VERSION', '1.36.1' );
+define( 'RRT_VERSION', '1.36.2' );
 define( 'RRT_FILE', __FILE__ );
 define( 'RRT_DIR', plugin_dir_path( __FILE__ ) );
 define( 'RRT_URL', plugin_dir_url( __FILE__ ) );
@@ -94,6 +94,7 @@ require_once RRT_DIR . 'includes/share.php';
 require_once RRT_DIR . 'includes/sent.php';
 require_once RRT_DIR . 'includes/live.php';
 require_once RRT_DIR . 'includes/shelf.php';
+require_once RRT_DIR . 'includes/tidy.php';
 require_once RRT_DIR . 'includes/podcast.php';
 require_once RRT_DIR . 'includes/feed.php';
 require_once RRT_DIR . 'includes/collections.php';

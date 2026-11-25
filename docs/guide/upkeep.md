@@ -24,6 +24,6 @@ Deactivate it, then Delete it on the Plugins screen. Before you do, decide on Se
 - Left unticked (the default), everything stays, so reinstalling loses nothing. Only the settings and the plugin's copies of the fonts, MP3 encoder and noise model are removed.
 - Ticked, everything else goes too: reader stats, listener analytics, cue marks, pronunciation notes, words taught for one post, shared and sent takes, take shelves, each post's reading, captions and Read by links, readings kept aside, collections and their joined files, audiobook copies, saved YouTube and SoundCloud pictures, and the Whisper files on this site.
 
-Either way, MP3s and captions in the Media Library are never deleted, readings kept for members go back to their public place first, and outside storage is never touched (press Delete the outside copies under Storage offload first if you want them gone).
+Either way, removing the plugin never deletes MP3s and captions in the Media Library, readings kept for members go back to their public place first, and outside storage is never touched (press Delete the outside copies under Storage offload first if you want them gone).
 
 [All guides](README.md)

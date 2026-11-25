@@ -179,6 +179,7 @@ function rrt_base_defaults() {
 		'stats'      => array(
 			'server'              => true,   // Keep takes, recordings and taught words on this site (0.9.0); off keeps them in each browser.
 			'delete_on_uninstall' => false,  // Remove all stats when the plugin is deleted.
+			'tidy_on_delete'      => true,   // A post deleted for good takes its readings, captions and takes with it (1.36.2).
 		),
 		// Listener analytics (0.10.0): how visitors listen to the public player, measured on this site only.
 		'listen'     => array(
@@ -525,6 +526,7 @@ function rrt_sanitize_settings( $in ) {
 		if ( isset( $in['stats'] ) && is_array( $in['stats'] ) && isset( $in['stats']['present'] ) ) {
 			$out['stats']['server']              = ! empty( $in['stats']['server'] );
 			$out['stats']['delete_on_uninstall'] = ! empty( $in['stats']['delete_on_uninstall'] );
+			$out['stats']['tidy_on_delete']      = ! empty( $in['stats']['tidy_on_delete'] );
 		}
 		/* Listener analytics (0.10.0), the same way. */
 		if ( isset( $in['listen'] ) && is_array( $in['listen'] ) && isset( $in['listen']['present'] ) ) {

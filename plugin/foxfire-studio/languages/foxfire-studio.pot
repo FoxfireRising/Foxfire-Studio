@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Foxfire Studio 1.36.1\n"
+"Project-Id-Version: Foxfire Studio 1.36.2\n"
 "Report-Msgid-Bugs-To: https://github.com/FoxfireRising/Foxfire-Studio/issues\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-22T22:26:31+00:00\n"
+"POT-Creation-Date: 2026-11-25T01:13:34+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: foxfire-studio\n"
@@ -127,7 +127,7 @@ msgstr ""
 
 #: includes/a11y.php:199
 #: includes/admin.php:245
-#: includes/help-text.php:867
+#: includes/help-text.php:873
 msgid "Colours"
 msgstr ""
 
@@ -180,7 +180,7 @@ msgstr ""
 
 #: includes/admin.php:123
 #: includes/admin.php:174
-#: includes/help-text.php:864
+#: includes/help-text.php:870
 msgid "Look"
 msgstr ""
 
@@ -206,7 +206,7 @@ msgid "Custom"
 msgstr ""
 
 #: includes/admin.php:141
-#: includes/help-text.php:865
+#: includes/help-text.php:871
 msgid "Wording"
 msgstr ""
 
@@ -239,7 +239,7 @@ msgid "Short line in the corner of the teleprompter (leave empty for none)"
 msgstr ""
 
 #: includes/admin.php:162
-#: includes/help-text.php:866
+#: includes/help-text.php:872
 msgid "Teleprompter look"
 msgstr ""
 
@@ -271,7 +271,7 @@ msgstr ""
 
 #. translators: %s: seconds.
 #: includes/admin.php:192
-#: includes/admin.php:1157
+#: includes/admin.php:1164
 #: includes/collections.php:1479
 #: includes/player.php:396
 #: includes/podcast.php:750
@@ -294,7 +294,7 @@ msgstr ""
 
 #: includes/admin.php:194
 #: includes/admin.php:504
-#: includes/admin.php:1104
+#: includes/admin.php:1111
 #: includes/offload.php:1439
 #: includes/player.php:398
 #: includes/podcast.php:856
@@ -362,8 +362,8 @@ msgid "Used by the player on your posts, by the Foxfire Studio look, by clips an
 msgstr ""
 
 #: includes/admin.php:257
-#: includes/admin.php:906
-#: includes/help-text.php:868
+#: includes/admin.php:913
+#: includes/help-text.php:874
 msgid "Fonts"
 msgstr ""
 
@@ -390,8 +390,8 @@ msgstr ""
 #: includes/admin.php:281
 #: includes/dashboard.php:536
 #: includes/dashboard.php:647
-#: includes/help-text.php:631
-#: includes/help-text.php:869
+#: includes/help-text.php:637
+#: includes/help-text.php:875
 #: includes/keep.php:718
 #: includes/report.php:709
 #: includes/report.php:818
@@ -513,8 +513,8 @@ msgid "Content that can be read"
 msgstr ""
 
 #: includes/admin.php:332
-#: includes/help-text.php:633
-#: includes/help-text.php:870
+#: includes/help-text.php:639
+#: includes/help-text.php:876
 msgid "Broadcast sound"
 msgstr ""
 
@@ -699,8 +699,8 @@ msgid "About 1.4 MB a minute, in a folder visitors cannot open. A reading alread
 msgstr ""
 
 #: includes/admin.php:473
-#: includes/help-text.php:635
-#: includes/help-text.php:871
+#: includes/help-text.php:641
+#: includes/help-text.php:877
 #: includes/player.php:437
 #: views/teleprompter.php:468
 msgid "Music bed"
@@ -716,7 +716,7 @@ msgstr ""
 
 #: includes/admin.php:483
 #: includes/admin.php:495
-#: includes/admin.php:1090
+#: includes/admin.php:1097
 msgid "Default"
 msgstr ""
 
@@ -733,7 +733,7 @@ msgid "No music bed unless a post chooses one"
 msgstr ""
 
 #: includes/admin.php:503
-#: includes/admin.php:1102
+#: includes/admin.php:1109
 msgid "for example: Night Garden by A. Composer, CC BY 4.0"
 msgstr ""
 
@@ -782,7 +782,7 @@ msgid "Left off, the music stays steady from the first word to the last."
 msgstr ""
 
 #: includes/admin.php:540
-#: includes/help-text.php:872
+#: includes/help-text.php:878
 #: assets/js/review.js:277
 msgid "Whisper"
 msgstr ""
@@ -816,8 +816,8 @@ msgid "Either way, Whisper runs on the reader's own computer and recordings neve
 msgstr ""
 
 #: includes/admin.php:560
-#: includes/help-text.php:639
-#: includes/help-text.php:873
+#: includes/help-text.php:645
+#: includes/help-text.php:879
 msgid "Listening player"
 msgstr ""
 
@@ -941,8 +941,8 @@ msgid "What podcast apps and phone lock screens show as the show, and what goes 
 msgstr ""
 
 #: includes/admin.php:650
-#: includes/help-text.php:641
-#: includes/help-text.php:874
+#: includes/help-text.php:647
+#: includes/help-text.php:880
 msgid "Reader stats"
 msgstr ""
 
@@ -990,198 +990,210 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: includes/admin.php:679
-msgid "When the plugin is deleted"
+msgid "When a post is deleted for good"
 msgstr ""
 
 #: includes/admin.php:681
-msgid "When the plugin is deleted, also delete everything else it keeps: reader stats, listener analytics, cue marks, pronunciation notes, words taught for one post, shared and sent takes, each post's reading, captions and Read by links, readings kept aside, and the Whisper files on this site"
+msgid "Also delete its readings: the MP3s and captions in the Media Library, its takes waiting from a phone or kept on the take shelf, and its rows on Foxfire Studio, Recordings"
 msgstr ""
 
 #: includes/admin.php:682
+msgid "Only when the post leaves the Trash for good (Delete Permanently, Empty Trash, or WordPress emptying the Trash after 30 days). A post in the Trash keeps its reading, so restoring it brings the reading back. A file another post still uses is never deleted. Listening history in Reports and Insights stays. Unticked, WordPress's usual way applies: the files stay in the Media Library."
+msgstr ""
+
+#: includes/admin.php:686
+msgid "When the plugin is deleted"
+msgstr ""
+
+#: includes/admin.php:688
+msgid "When the plugin is deleted, also delete everything else it keeps: reader stats, listener analytics, cue marks, pronunciation notes, words taught for one post, shared and sent takes, each post's reading, captions and Read by links, readings kept aside, and the Whisper files on this site"
+msgstr ""
+
+#: includes/admin.php:689
 msgid "Left unticked, all of this stays, so reinstalling loses nothing. The settings and the copies of the fonts, MP3 encoder and noise model are always removed. MP3s and captions in the Media Library are never deleted. Readers can also ask for their own stats to be exported or erased with WordPress's personal data tools (Tools, Export or Erase Personal Data)."
 msgstr ""
 
-#: includes/admin.php:687
-#: includes/help-text.php:875
+#: includes/admin.php:694
+#: includes/help-text.php:881
 #: includes/setup.php:351
 msgid "Listener analytics"
 msgstr ""
 
-#: includes/admin.php:690
+#: includes/admin.php:697
 msgid "Measure listening"
 msgstr ""
 
-#: includes/admin.php:693
+#: includes/admin.php:700
 msgid "Measure how visitors listen to each reading"
 msgstr ""
 
-#: includes/admin.php:694
+#: includes/admin.php:701
 msgid "Plays, which parts are heard, speed changes, skips, where listeners leave, and which sites and links bring them. Measured on this site only, with no cookies and no outside services. No IP address is stored: each visitor gets an anonymous id that changes every day and cannot be traced back. If your site has a page cache, empty it after switching this on or off."
 msgstr ""
 
 #. translators: %s: the name of a section of this page, For your privacy policy, in italics.
-#: includes/admin.php:699
+#: includes/admin.php:706
 #, php-format
 msgid "Off until you switch it on. Before you do, add the paragraph under %s at the bottom of this page to your site's privacy policy."
 msgstr ""
 
-#: includes/admin.php:700
-#: includes/admin.php:993
-#: includes/help-text.php:651
-#: includes/help-text.php:883
+#: includes/admin.php:707
+#: includes/admin.php:1000
+#: includes/help-text.php:657
+#: includes/help-text.php:889
 msgid "For your privacy policy"
 msgstr ""
 
-#: includes/admin.php:707
+#: includes/admin.php:714
 msgid "Leave out"
 msgstr ""
 
-#: includes/admin.php:710
+#: includes/admin.php:717
 msgid "Editors and admins (anyone who can edit posts)"
 msgstr ""
 
-#: includes/admin.php:711
+#: includes/admin.php:718
 msgid "Everyone who is logged in"
 msgstr ""
 
-#: includes/admin.php:712
+#: includes/admin.php:719
 msgid "Nobody"
 msgstr ""
 
-#: includes/admin.php:714
+#: includes/admin.php:721
 msgid "So your own testing does not count. To test as a listener, use a browser where you are not logged in."
 msgstr ""
 
-#: includes/admin.php:718
+#: includes/admin.php:725
 msgid "Privacy signals"
 msgstr ""
 
-#: includes/admin.php:719
+#: includes/admin.php:726
 msgid "Do not measure visitors whose browser sends Do Not Track or Global Privacy Control"
 msgstr ""
 
-#: includes/admin.php:722
+#: includes/admin.php:729
 #: includes/dashboard.php:241
 #: includes/setup.php:352
 msgid "Returning listeners"
 msgstr ""
 
-#: includes/admin.php:724
+#: includes/admin.php:731
 msgid "Tell new listeners from returning ones"
 msgstr ""
 
-#: includes/admin.php:725
+#: includes/admin.php:732
 msgid "Remember a listen for"
 msgstr ""
 
 #. translators: %d: number of months.
-#: includes/admin.php:728
+#: includes/admin.php:735
 #, php-format
 msgid "%d month"
 msgid_plural "%d months"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/admin.php:732
+#: includes/admin.php:739
 msgid "After someone listens for 30 seconds (or to a whole short reading), the player keeps that month in their browser's own storage. On a later visit it sends only a yes or no: listened here before, within the time above. The month never leaves the browser, and nothing links one day's visits to another's. Off by default: before switching it on, add a line to your site's privacy policy (the paragraph at the bottom of this page includes one while it is on). In the EU and UK, browser storage is treated much like a cookie, so check whether your visitors there need to be asked first."
 msgstr ""
 
-#: includes/admin.php:736
+#: includes/admin.php:743
 #: includes/setup.php:353
 msgid "Google Analytics"
 msgstr ""
 
-#: includes/admin.php:738
+#: includes/admin.php:745
 msgid "Also send plays to the Google Analytics this site already loads"
 msgstr ""
 
 #. translators: 1 to 3: the event names audio_start, audio_progress and audio_complete, shown as code.
-#: includes/admin.php:742
+#: includes/admin.php:749
 #, php-format
 msgid "Sends %1$s at the first play, %2$s at halfway and %3$s at the end, each with the reading's title. Works only where the page already has a Google Analytics tag; this setting adds none. Foxfire Studio's own numbers stay as they are, and the two will differ, because Google Analytics uses cookies and ad blockers stop it. Your privacy policy should say that listening is reported to Google Analytics. Works whether or not Measure listening is on, and leaves out the same visitors."
 msgstr ""
 
-#: includes/admin.php:751
+#: includes/admin.php:758
 msgid "Short campaign tag"
 msgstr ""
 
 #. translators: 1: an example tagged link; 2 to 5: the tag names utm_source, utm_medium, utm_campaign and utm_content. All shown as code.
-#: includes/admin.php:757
+#: includes/admin.php:764
 #, php-format
 msgid "Add it to links you share, so each one can be compared: %1$s. The usual %2$s, %3$s, %4$s and %5$s tags work too."
 msgstr ""
 
-#: includes/admin.php:768
+#: includes/admin.php:775
 #: assets/js/pronounce.js:381
 msgid "Keep"
 msgstr ""
 
-#: includes/admin.php:770
+#: includes/admin.php:777
 msgid "Every event of each visit for"
 msgstr ""
 
-#: includes/admin.php:770
-#: includes/admin.php:771
+#: includes/admin.php:777
+#: includes/admin.php:778
 msgid "days"
 msgstr ""
 
-#: includes/admin.php:771
+#: includes/admin.php:778
 msgid "Each visit's summary for"
 msgstr ""
 
-#: includes/admin.php:772
+#: includes/admin.php:779
 msgid "Daily totals, which say nothing about any one visitor, are kept."
 msgstr ""
 
-#: includes/admin.php:776
+#: includes/admin.php:783
 msgid "Trusted proxies"
 msgstr ""
 
-#: includes/admin.php:778
+#: includes/admin.php:785
 msgid "Leave empty unless your site is behind a CDN or proxy"
 msgstr ""
 
-#: includes/admin.php:779
+#: includes/admin.php:786
 msgid "Read the visitor's address from"
 msgstr ""
 
-#: includes/admin.php:784
+#: includes/admin.php:791
 msgid "CF-Connecting-IP (Cloudflare)"
 msgstr ""
 
 #. translators: %s: an example address range.
-#: includes/admin.php:798
+#: includes/admin.php:805
 #, php-format
 msgid "Only if your site sits behind a CDN or reverse proxy: list its addresses or ranges (such as %s), one per line, as your provider publishes them. The header above is then read only on requests that arrive from those addresses; from anywhere else it is ignored, so visitors cannot fake their address. Empty means the connection's own address is used for every visit. Country headers sent by a proxy are trusted the same way."
 msgstr ""
 
-#: includes/admin.php:808
+#: includes/admin.php:815
 msgid "Save settings"
 msgstr ""
 
-#: includes/admin.php:818
-#: includes/help-text.php:878
+#: includes/admin.php:825
+#: includes/help-text.php:884
 msgid "Whisper on this site"
 msgstr ""
 
 #. translators: 1: $wst['have'], 2: $wst['count'], 3: rrt_size( $wst['bytes'] ), 4: str_replace( ABSPATH, '', $wst['dir'] ).
-#: includes/admin.php:823
+#: includes/admin.php:830
 #, php-format
 msgid "%1$d of %2$d files present (%3$s) in %4$s"
 msgstr ""
 
 #. translators: 1: $wst['have'], 2: $wst['count'], 3: rrt_size( $wst['bytes'] ), 4: str_replace( ABSPATH, '', $wst['dir'] ).
-#: includes/admin.php:824
+#: includes/admin.php:831
 msgid "Not on this site yet. Whisper currently loads from Hugging Face and jsDelivr."
 msgstr ""
 
-#: includes/admin.php:829
-#: includes/admin.php:852
-#: includes/admin.php:873
-#: includes/admin.php:894
-#: includes/admin.php:911
-#: includes/admin.php:921
-#: includes/admin.php:1203
+#: includes/admin.php:836
+#: includes/admin.php:859
+#: includes/admin.php:880
+#: includes/admin.php:901
+#: includes/admin.php:918
+#: includes/admin.php:928
+#: includes/admin.php:1210
 #: assets/js/audiobook.js:807
 #: assets/js/files.js:56
 #: assets/js/files.js:157
@@ -1190,148 +1202,148 @@ msgstr ""
 msgid "Download again"
 msgstr ""
 
-#: includes/admin.php:829
+#: includes/admin.php:836
 msgid "Download Whisper to this site"
 msgstr ""
 
-#: includes/admin.php:830
+#: includes/admin.php:837
 msgid "About 116 MB of your hosting space. Downloads one file at a time; keep this page open until it finishes."
 msgstr ""
 
-#: includes/admin.php:838
+#: includes/admin.php:845
 msgid "The larger model"
 msgstr ""
 
-#: includes/admin.php:839
+#: includes/admin.php:846
 msgid "Whisper small hears unusual words, names and quiet endings more accurately than the standard model, but on the processor it takes about two to three times as long and needs a faster computer. Readers choose it in the teleprompter, beside Whisper review; it uses the code above, so download that first."
 msgstr ""
 
-#: includes/admin.php:840
+#: includes/admin.php:847
 msgid "On a computer whose graphics chip can run it (WebGPU with half precision, as Chrome and Edge offer on most laptops), the larger model runs on the graphics chip instead: a 14-minute reading takes about 5 to 8 minutes there, against about 27 on the processor. The teleprompter's Model menu, under Recording in the Controls panel, is set to Automatic in every browser at first: full reviews then use the larger model wherever the graphics chip can run it, and the standard model everywhere else. If the graphics chip fails, the review carries on with the processor and says so. The graphics chip needs two more files of the model (about 322 MB), downloaded with the rest below; until they are on this site, they load from Hugging Face."
 msgstr ""
 
-#: includes/admin.php:841
+#: includes/admin.php:848
 msgid "A laptop with two graphics chips: Windows chooses which one the browser gets. To give it the stronger one, open Windows Settings, System, Display, Graphics, choose the browser and set it to High performance, then end the browser fully in Task Manager and open it again (closing its windows is not enough). The review's status line says when Whisper is listening on the graphics chip."
 msgstr ""
 
 #. translators: 1: $wsm['have'], 2: $wsm['count'], 3: rrt_size( $wsm['bytes'] ).
 #. translators: 1: $wmu['have'], 2: $wmu['count'], 3: rrt_size( $wmu['bytes'] ).
 #. translators: 1: $wfo['have'], 2: $wfo['count'], 3: rrt_size( $wfo['bytes'] ).
-#: includes/admin.php:846
-#: includes/admin.php:867
-#: includes/admin.php:888
+#: includes/admin.php:853
+#: includes/admin.php:874
+#: includes/admin.php:895
 #, php-format
 msgid "%1$d of %2$d files present (%3$s)."
 msgstr ""
 
 #. translators: 1: $wsm['have'], 2: $wsm['count'], 3: rrt_size( $wsm['bytes'] ).
-#: includes/admin.php:847
+#: includes/admin.php:854
 msgid "Not on this site yet. When chosen, the larger model loads from Hugging Face."
 msgstr ""
 
-#: includes/admin.php:852
+#: includes/admin.php:859
 msgid "Download the larger model to this site"
 msgstr ""
 
-#: includes/admin.php:853
+#: includes/admin.php:860
 msgid "About 570 MB of your hosting space, with the graphics chip's files. Downloads one file at a time, skipping any already here; the large files can take a few minutes each. Keep this page open until it finishes."
 msgstr ""
 
-#: includes/admin.php:861
+#: includes/admin.php:868
 msgid "Other languages"
 msgstr ""
 
 #. translators: %s: language name.
-#: includes/admin.php:862
+#: includes/admin.php:869
 #, php-format
 msgid "A reading in any language but English is reviewed by Whisper's multilingual models, the same two sizes as above, with the reading's language set so Whisper writes down what it hears and never translates it. English readings keep the English models. Each post's language is chosen in its Reading audio box (Reading language); otherwise it is the site's language, %s now (Settings, General, Site Language)."
 msgstr ""
 
 #. translators: 1: $wmu['have'], 2: $wmu['count'], 3: rrt_size( $wmu['bytes'] ).
-#: includes/admin.php:868
+#: includes/admin.php:875
 msgid "Not on this site yet. When a reading in another language is reviewed, the models load from Hugging Face."
 msgstr ""
 
-#: includes/admin.php:873
+#: includes/admin.php:880
 msgid "Download the other-languages models to this site"
 msgstr ""
 
-#: includes/admin.php:874
+#: includes/admin.php:881
 msgid "About 650 MB of your hosting space: the standard size (about 77 MB), the larger size (about 249 MB) and its graphics chip files (about 322 MB). Uses the code above, so download that first. Downloads one file at a time, skipping any already here; keep this page open until it finishes."
 msgstr ""
 
-#: includes/admin.php:882
-#: includes/help-text.php:879
+#: includes/admin.php:889
+#: includes/help-text.php:885
 msgid "Voice following on this site"
 msgstr ""
 
-#: includes/admin.php:883
+#: includes/admin.php:890
 msgid "Follow my voice (in the teleprompter's Controls, under Reading) scrolls the script as you read, with a small speech model that runs on your own device. Your voice never leaves the browser. The speech engine comes with the plugin; the model loads from Hugging Face unless it is on this site."
 msgstr ""
 
 #. translators: 1: $wfo['have'], 2: $wfo['count'], 3: rrt_size( $wfo['bytes'] ).
-#: includes/admin.php:889
+#: includes/admin.php:896
 msgid "Not on this site yet. Voice following loads its model from Hugging Face."
 msgstr ""
 
-#: includes/admin.php:894
+#: includes/admin.php:901
 msgid "Download voice following to this site"
 msgstr ""
 
-#: includes/admin.php:895
+#: includes/admin.php:902
 msgid "About 45 MB of your hosting space. Downloads one file at a time; keep this page open until it finishes."
 msgstr ""
 
-#: includes/admin.php:903
-#: includes/help-text.php:880
+#: includes/admin.php:910
+#: includes/help-text.php:886
 msgid "Fonts, MP3 encoder and noise model on this site"
 msgstr ""
 
-#: includes/admin.php:904
+#: includes/admin.php:911
 msgid "The teleprompter page loads its fonts from Google Fonts and its MP3 encoder and noise model from jsDelivr. With copies on this site, it makes no outside requests apart from Whisper and voice following (above) when their files are not here."
 msgstr ""
 
-#: includes/admin.php:907
+#: includes/admin.php:914
 msgid "MP3 encoder"
 msgstr ""
 
-#: includes/admin.php:908
+#: includes/admin.php:915
 msgid "Noise model"
 msgstr ""
 
-#: includes/admin.php:911
-#: includes/admin.php:921
+#: includes/admin.php:918
+#: includes/admin.php:928
 #: includes/setup.php:624
 msgid "Download to this site"
 msgstr ""
 
-#: includes/admin.php:912
+#: includes/admin.php:919
 msgid "A few hundred KB to a few MB, depending on the fonts. If you change the font link, save, then download again. Until then the new fonts load from Google Fonts."
 msgstr ""
 
-#: includes/admin.php:917
-#: includes/help-text.php:881
+#: includes/admin.php:924
+#: includes/help-text.php:887
 msgid "Listener countries"
 msgstr ""
 
-#: includes/admin.php:918
+#: includes/admin.php:925
 msgid "Each listener's country is worked out from their IP address while the visit is being recorded, and only the country is kept. Your host or CDN may send it; otherwise this site uses its own copy of DB-IP's free country database, refreshed each month."
 msgstr ""
 
-#: includes/admin.php:919
+#: includes/admin.php:926
 msgid "Country database:"
 msgstr ""
 
-#: includes/admin.php:922
+#: includes/admin.php:929
 msgid "A download of up to 30 MB, saved as a file of about 5 MB. It can take a minute."
 msgstr ""
 
-#: includes/admin.php:926
+#: includes/admin.php:933
 msgid "Your visit right now:"
 msgstr ""
 
 #. translators: %s: country.
-#: includes/admin.php:931
+#: includes/admin.php:938
 #, php-format
 msgid "%s, from the country database."
 msgstr ""
@@ -1339,59 +1351,59 @@ msgstr ""
 #. translators: %s: country.
 #. translators: 1: country, 2: where it came from.
 #. translators: %s: file type.
-#: includes/admin.php:931
-#: includes/admin.php:933
+#: includes/admin.php:938
+#: includes/admin.php:940
 #: includes/podcast.php:176
 msgid "unknown"
 msgstr ""
 
 #. translators: 1: country, 2: where it came from.
-#: includes/admin.php:933
+#: includes/admin.php:940
 #, php-format
 msgid "%1$s, sent by your host or CDN (%2$s)."
 msgstr ""
 
-#: includes/admin.php:934
+#: includes/admin.php:941
 msgid "This visit came through one of your trusted proxies; the address was read from the connection, because the proxy sent no usable header."
 msgstr ""
 
-#: includes/admin.php:934
+#: includes/admin.php:941
 msgid "This visit came through one of your trusted proxies; the address was read from its header."
 msgstr ""
 
 #. translators: 1: forwarded address, 2: country.
-#: includes/admin.php:934
+#: includes/admin.php:941
 #, php-format
 msgid "The server also received a forwarded address (%1$s) that the database places in %2$s. It is ignored. If your site is behind a CDN or proxy, add it under Trusted proxies above."
 msgstr ""
 
 #. translators: 1: forwarded address, 2: country.
-#: includes/admin.php:934
+#: includes/admin.php:941
 msgid "an unknown country"
 msgstr ""
 
 #. translators: 1: forwarded address, 2: country.
-#: includes/admin.php:934
+#: includes/admin.php:941
 msgid " No proxy in between."
 msgstr ""
 
-#: includes/admin.php:936
+#: includes/admin.php:943
 msgid "If this is not where you are, visitors' countries will be off in the same way."
 msgstr ""
 
 #. translators: %s: link to the licence.
-#: includes/admin.php:939
+#: includes/admin.php:946
 #, php-format
 msgid "used under the %s licence."
 msgstr ""
 
-#: includes/admin.php:941
-#: includes/help-text.php:882
+#: includes/admin.php:948
+#: includes/help-text.php:888
 msgid "Recent listens"
 msgstr ""
 
 #. translators: 1: number of visitors, 2: number who pressed play.
-#: includes/admin.php:950
+#: includes/admin.php:957
 #, php-format
 msgid "Today: %1$s visitor to posts with a reading, %2$s pressed play (each listener counted once per reading per day)."
 msgid_plural "Today: %1$s visitors to posts with a reading, %2$s pressed play (each listener counted once per reading per day)."
@@ -1399,7 +1411,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: 1: page views, 2: days, 3: how long ago, such as 5 mins.
-#: includes/admin.php:955
+#: includes/admin.php:962
 #, php-format
 msgid "%1$s page views kept; daily totals for %2$s day, last brought up to date %3$s ago."
 msgid_plural "%1$s page views kept; daily totals for %2$s days, last brought up to date %3$s ago."
@@ -1407,19 +1419,19 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: 1: page views, 2: days.
-#: includes/admin.php:957
+#: includes/admin.php:964
 #, php-format
 msgid "%1$s page views kept; daily totals for %2$s day."
 msgid_plural "%1$s page views kept; daily totals for %2$s days."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/admin.php:959
+#: includes/admin.php:966
 msgid "This list is for checking that listens arrive; the full picture is in the Foxfire Studio menu."
 msgstr ""
 
 #. translators: %s: number of drills.
-#: includes/admin.php:964
+#: includes/admin.php:971
 #: includes/clip.php:222
 #: includes/dashboard.php:1188
 #: includes/dashboard.php:1238
@@ -1429,12 +1441,12 @@ msgstr ""
 #. translators: %s: number of drills.
 #. translators: %d: number of days.
 #. translators: 1: takes kept a post, 2: days.
-#: includes/admin.php:964
+#: includes/admin.php:971
 #: includes/backlog.php:366
 #: includes/dashboard.php:1023
 #: includes/dashboard.php:1188
 #: includes/dashboard.php:1238
-#: includes/dashboard.php:1311
+#: includes/dashboard.php:1322
 #: includes/keep.php:718
 #: includes/sent.php:343
 #: includes/shelf.php:924
@@ -1446,109 +1458,109 @@ msgstr ""
 msgid "Post"
 msgstr ""
 
-#: includes/admin.php:964
+#: includes/admin.php:971
 #: includes/dashboard.php:549
 #: includes/dashboard.php:863
 msgid "Came from"
 msgstr ""
 
-#: includes/admin.php:964
+#: includes/admin.php:971
 #: includes/dashboard.php:325
 msgid "Device"
 msgstr ""
 
-#: includes/admin.php:964
+#: includes/admin.php:971
 msgid "Country"
 msgstr ""
 
-#: includes/admin.php:964
+#: includes/admin.php:971
 #: includes/report.php:740
 msgid "Played"
 msgstr ""
 
-#: includes/admin.php:964
+#: includes/admin.php:971
 msgid "Heard"
 msgstr ""
 
-#: includes/admin.php:964
+#: includes/admin.php:971
 msgid "Furthest"
 msgstr ""
 
-#: includes/admin.php:964
+#: includes/admin.php:971
 #: includes/dashboard.php:647
 msgid "Speed"
 msgstr ""
 
-#: includes/admin.php:964
+#: includes/admin.php:971
 msgid "Ended by"
 msgstr ""
 
-#: includes/admin.php:972
+#: includes/admin.php:979
 msgid "reaching the end"
 msgstr ""
 
-#: includes/admin.php:972
+#: includes/admin.php:979
 msgid "pausing"
 msgstr ""
 
-#: includes/admin.php:972
+#: includes/admin.php:979
 msgid "closing the page while playing"
 msgstr ""
 
-#: includes/admin.php:972
+#: includes/admin.php:979
 msgid "leaving the page"
 msgstr ""
 
-#: includes/admin.php:972
+#: includes/admin.php:979
 msgid "leaving without playing"
 msgstr ""
 
-#: includes/admin.php:972
+#: includes/admin.php:979
 msgid "still open"
 msgstr ""
 
-#: includes/admin.php:974
+#: includes/admin.php:981
 msgid "Not counted: timing no real player can produce"
 msgstr ""
 
-#: includes/admin.php:990
+#: includes/admin.php:997
 msgid "No listens yet."
 msgstr ""
 
-#: includes/admin.php:994
+#: includes/admin.php:1001
 msgid "A paragraph describing the listener analytics and any of its options that are on, ready to paste. It is also offered in WordPress's own privacy policy guide (Settings, Privacy)."
 msgstr ""
 
-#: includes/admin.php:1112
+#: includes/admin.php:1119
 msgid "Choose music for the music bed"
 msgstr ""
 
-#: includes/admin.php:1112
+#: includes/admin.php:1119
 msgid "Add to the music bed"
 msgstr ""
 
-#: includes/admin.php:1141
+#: includes/admin.php:1148
 msgid "Choose the intro video"
 msgstr ""
 
-#: includes/admin.php:1141
+#: includes/admin.php:1148
 msgid "Use this video"
 msgstr ""
 
-#: includes/admin.php:1192
+#: includes/admin.php:1199
 msgid " Downloading and converting..."
 msgstr ""
 
-#: includes/admin.php:1198
+#: includes/admin.php:1205
 #: assets/js/files.js:107
 msgid "The request timed out or was refused."
 msgstr ""
 
-#: includes/admin.php:1202
+#: includes/admin.php:1209
 msgid " Done."
 msgstr ""
 
-#: includes/admin.php:1202
+#: includes/admin.php:1209
 #: assets/js/files.js:109
 msgid "Something went wrong."
 msgstr ""
@@ -1710,11 +1722,11 @@ msgstr[1] ""
 #: includes/dashboard.php:616
 #: includes/dashboard.php:937
 #: includes/dashboard.php:1298
-#: includes/dashboard.php:1386
-#: includes/dashboard.php:1413
-#: includes/dashboard.php:1426
-#: includes/dashboard.php:1440
-#: includes/dashboard.php:1465
+#: includes/dashboard.php:1415
+#: includes/dashboard.php:1442
+#: includes/dashboard.php:1455
+#: includes/dashboard.php:1469
+#: includes/dashboard.php:1494
 #: includes/dl-admin.php:158
 #: includes/dl-method.php:236
 #: includes/embeds.php:913
@@ -1735,6 +1747,8 @@ msgstr[1] ""
 #: includes/shelf.php:898
 #: includes/shelf.php:949
 #: includes/suggest.php:482
+#: includes/tidy.php:389
+#: includes/tidy.php:412
 msgid "Not allowed."
 msgstr ""
 
@@ -2226,7 +2240,7 @@ msgstr ""
 #: includes/dashboard.php:26
 #: includes/dashboard.php:381
 #: includes/dashboard.php:626
-#: includes/help-text.php:611
+#: includes/help-text.php:617
 #: includes/insights.php:891
 #: includes/render.php:314
 msgid "Readings"
@@ -2239,7 +2253,7 @@ msgstr ""
 #: includes/dashboard.php:647
 #: includes/dashboard.php:1188
 #: includes/dashboard.php:1238
-#: includes/dashboard.php:1311
+#: includes/dashboard.php:1322
 #: includes/insights.php:362
 #: includes/insights.php:365
 #: includes/keep.php:718
@@ -2420,7 +2434,7 @@ msgstr ""
 
 #: includes/dashboard.php:25
 #: includes/dashboard.php:380
-#: includes/help-text.php:609
+#: includes/help-text.php:615
 #: includes/render.php:313
 msgid "Overview"
 msgstr ""
@@ -2448,7 +2462,7 @@ msgstr ""
 
 #: includes/dashboard.php:33
 #: includes/dashboard.php:386
-#: includes/help-text.php:615
+#: includes/help-text.php:621
 #: includes/insights.php:836
 #: includes/insights.php:865
 #: includes/render.php:316
@@ -2464,7 +2478,7 @@ msgstr ""
 
 #: includes/dashboard.php:35
 #: includes/dashboard.php:388
-#: includes/help-text.php:617
+#: includes/help-text.php:623
 #: includes/render.php:319
 #: includes/report-admin.php:58
 msgid "Reports"
@@ -3028,7 +3042,7 @@ msgid "Tag"
 msgstr ""
 
 #: includes/dashboard.php:647
-#: includes/dashboard.php:1311
+#: includes/dashboard.php:1322
 #: includes/insights.php:373
 #: includes/insights.php:375
 msgid "Tempo"
@@ -3288,17 +3302,19 @@ msgstr ""
 
 #. translators: %s: decibels.
 #: includes/dashboard.php:890
-#: includes/dashboard.php:1311
+#: includes/dashboard.php:1322
 msgid "Edited"
 msgstr ""
 
 #. translators: %s: decibels.
 #: includes/dashboard.php:890
+#: includes/tidy.php:99
 msgid "yes"
 msgstr ""
 
 #. translators: %s: decibels.
 #: includes/dashboard.php:890
+#: includes/tidy.php:103
 msgid "no"
 msgstr ""
 
@@ -3703,17 +3719,17 @@ msgstr ""
 msgid "One line per day with takes, worked out from the takes themselves. The note is yours."
 msgstr ""
 
-#: includes/dashboard.php:1308
+#: includes/dashboard.php:1312
 msgid "Every MP3 that has been a post's reading."
 msgstr ""
 
-#: includes/dashboard.php:1311
+#: includes/dashboard.php:1322
 msgid "File"
 msgstr ""
 
 #. translators: %d: number of days.
 #. translators: 1: takes kept a post, 2: days.
-#: includes/dashboard.php:1311
+#: includes/dashboard.php:1322
 #: includes/keep.php:718
 #: includes/sent.php:343
 #: includes/shelf.php:924
@@ -3721,55 +3737,66 @@ msgstr ""
 msgid "Size"
 msgstr ""
 
-#: includes/dashboard.php:1311
+#: includes/dashboard.php:1322
 msgid "Bitrate"
 msgstr ""
 
-#: includes/dashboard.php:1311
+#: includes/dashboard.php:1322
 msgid "Went live"
 msgstr ""
 
-#: includes/dashboard.php:1311
+#: includes/dashboard.php:1322
 #: assets/js/review.js:1809
 msgid "On the post now"
 msgstr ""
 
-#: includes/dashboard.php:1311
+#: includes/dashboard.php:1322
 msgid "How it got there"
 msgstr ""
 
-#: includes/dashboard.php:1315
+#: includes/dashboard.php:1326
+#: includes/sent.php:363
+#: includes/shelf.php:936
+#: includes/tidy.php:355
+#: views/teleprompter.php:452
+#: assets/js/record.js:268
+msgid "Delete"
+msgstr ""
+
+#: includes/dashboard.php:1329
 #: views/teleprompter.php:423
 #: views/teleprompter.php:471
 #: assets/js/review.js:1601
 msgid "Use this recording"
 msgstr ""
 
-#: includes/dashboard.php:1315
+#: includes/dashboard.php:1329
 msgid "Chosen by hand"
 msgstr ""
 
-#: includes/dashboard.php:1315
+#: includes/dashboard.php:1329
 msgid "Already there in 0.9.0"
 msgstr ""
 
-#: includes/dashboard.php:1320
+#: includes/dashboard.php:1334
 msgid "(untitled)"
 msgstr ""
 
-#: includes/dashboard.php:1320
+#: includes/dashboard.php:1334
 msgid "(post deleted)"
 msgstr ""
 
-#: includes/dashboard.php:1330
+#: includes/dashboard.php:1347
+#: includes/dashboard.php:1349
+#: includes/tidy.php:101
 msgid "kept aside"
 msgstr ""
 
-#: includes/dashboard.php:1334
+#: includes/dashboard.php:1363
 msgid "No recordings yet."
 msgstr ""
 
-#: includes/dashboard.php:1474
+#: includes/dashboard.php:1503
 msgid "Bad dates."
 msgstr ""
 
@@ -3786,8 +3813,8 @@ msgid "nginx's X-Accel-Redirect"
 msgstr ""
 
 #: includes/dl-admin.php:36
-#: includes/help-text.php:545
-#: includes/help-text.php:892
+#: includes/help-text.php:551
+#: includes/help-text.php:898
 msgid "Download counting"
 msgstr ""
 
@@ -4279,8 +4306,8 @@ msgid "%1$s on this site are shown as a picture with a play button. The picture 
 msgstr ""
 
 #: includes/embeds.php:887
-#: includes/help-text.php:647
-#: includes/help-text.php:877
+#: includes/help-text.php:653
+#: includes/help-text.php:883
 msgid "Embedded players"
 msgstr ""
 
@@ -4442,7 +4469,7 @@ msgid "Your site's setup"
 msgstr ""
 
 #: includes/help-text.php:42
-#: includes/help-text.php:750
+#: includes/help-text.php:756
 msgid "When something goes wrong"
 msgstr ""
 
@@ -4468,7 +4495,7 @@ msgstr ""
 
 #: includes/help-text.php:62
 #: includes/help-text.php:86
-#: includes/help-text.php:653
+#: includes/help-text.php:659
 #: assets/js/block-player.js:128
 msgid "Open Settings"
 msgstr ""
@@ -5168,309 +5195,333 @@ msgid "Every MP3 that has been a post's reading, with its length, size, bitrate,
 msgstr ""
 
 #: includes/help-text.php:379
-#: includes/help-text.php:896
+msgid "On the post now says what became of each reading: yes, no (taken off or replaced), kept aside, post in the Trash, or post deleted, with file deleted added when its MP3 is no longer on the site."
+msgstr ""
+
+#: includes/help-text.php:380
+msgid "Deleting old readings"
+msgstr ""
+
+#: includes/help-text.php:381
+msgid "Every reading that is no longer on a live post has a Delete button at the end of its row: readings taken off or replaced, and readings of posts in the Trash or deleted. Delete asks once on the page; Yes, delete for good removes the MP3, the captions that came with it and the row. A row whose file is already gone has Remove from list instead. The reading that is on a live post has no Delete; take it off the post first (its page under Foxfire Studio, Readings, Take off the post)."
+msgstr ""
+
+#: includes/help-text.php:382
+msgid "Clear readings of deleted posts, above the list, appears when there are any. It does the same for every reading whose post is in the Trash or deleted, and removes every row whose file is gone."
+msgstr ""
+
+#: includes/help-text.php:383
+msgid "A file another post still uses is never deleted: the row goes, the file stays, and the message says which post uses it. Deleting cannot be undone. Listening history in Reports and Insights stays."
+msgstr ""
+
+#: includes/help-text.php:384
+msgid "When a post is deleted for good (Delete Permanently, Empty Trash, or WordPress emptying the Trash after 30 days), its readings, captions, waiting phone takes, take shelf takes and rows here go with it, while Settings, Reader stats, When a post is deleted for good is ticked (the default). A post in the Trash keeps its reading, so restoring it brings the reading back."
+msgstr ""
+
+#: includes/help-text.php:385
+#: includes/help-text.php:902
 #: includes/keep.php:716
 msgid "Kept aside"
 msgstr ""
 
-#: includes/help-text.php:380
+#: includes/help-text.php:386
 msgid "Readings taken off their post with Take off the post (on the reading's page under Foxfire Studio, Readings). Each is kept in a folder visitors cannot open, and can be played here. Put back returns it to the Media Library at the address it had, with its captions, so it is the same episode in the podcast feed and its listening history carries on. Delete for good removes it after asking."
 msgstr ""
 
-#: includes/help-text.php:381
-#: includes/help-text.php:897
+#: includes/help-text.php:387
+#: includes/help-text.php:903
 #: includes/sent.php:341
 msgid "Sent from your phone"
 msgstr ""
 
-#: includes/help-text.php:382
+#: includes/help-text.php:388
 msgid "Takes recorded on a phone in phone take mode, or sent with Send to my computer, waiting to be reviewed on a computer. At most five can wait at once. Each is deleted from the site once you use, download or delete it in the studio, and after 14 days at most. To make room, open the studio on your computer: A take from your phone offers each waiting take with Open it and Delete."
 msgstr ""
 
-#: includes/help-text.php:383
-#: includes/help-text.php:898
+#: includes/help-text.php:389
+#: includes/help-text.php:904
 #: includes/shelf.php:922
 msgid "Your take shelf on the site"
 msgstr ""
 
-#: includes/help-text.php:384
+#: includes/help-text.php:390
 msgid "Shown while Settings, Take shelf is on: the takes of yours kept on the site, by post, with Delete for each. Only you can see or open your own. Takes leave by themselves after 30 days, and each post keeps its newest six."
 msgstr ""
 
-#: includes/help-text.php:385
+#: includes/help-text.php:391
 msgid "Shared takes are listed on their own screen, Foxfire Studio, Shared takes (see Share for feedback)."
 msgstr ""
 
-#: includes/help-text.php:390
+#: includes/help-text.php:396
 #: views/teleprompter.php:465
 #: assets/js/review.js:2051
 #: assets/js/review.js:2052
 msgid "Share for feedback"
 msgstr ""
 
-#: includes/help-text.php:391
+#: includes/help-text.php:397
 msgid "Let a friend hear a take with the script and leave comments on it."
 msgstr ""
 
-#: includes/help-text.php:393
+#: includes/help-text.php:399
 msgid "Share for feedback (in the review) lets someone with an account on your site hear a take with the script lighting up as it plays, and leave comments pinned to a moment or a word. A friend without an account can be added as a Subscriber (Users, Add New User, Role: Subscriber); Subscribers see nothing else of the plugin."
 msgstr ""
 
-#: includes/help-text.php:397
+#: includes/help-text.php:403
 msgid "In the review, press Share for feedback and choose who may hear it."
 msgstr ""
 
-#: includes/help-text.php:398
+#: includes/help-text.php:404
 msgid "They get an email. They sign in, listen, leave comments, and press Done."
 msgstr ""
 
-#: includes/help-text.php:399
+#: includes/help-text.php:405
 msgid "You get one email for each visit, when they press Done (or an hour after their last comment). The comments show in the review and on Foxfire Studio, Shared takes."
 msgstr ""
 
-#: includes/help-text.php:402
+#: includes/help-text.php:408
 msgid "Editors and administrators can share with anyone on the site. Authors and contributors can share with the site's editors and administrators, and with anyone who has shared a take with them."
 msgstr ""
 
-#: includes/help-text.php:403
+#: includes/help-text.php:409
 msgid "A share lasts 14 days, or until you end it. Then its audio is deleted from the site and the people you chose can no longer open it; their comments stay."
 msgstr ""
 
-#: includes/help-text.php:408
+#: includes/help-text.php:414
 msgid "Make a clip or a full video"
 msgstr ""
 
-#: includes/help-text.php:409
+#: includes/help-text.php:415
 msgid "Short captioned clips for social media, and the whole reading as a video for YouTube or Spotify."
 msgstr ""
 
-#: includes/help-text.php:411
+#: includes/help-text.php:417
 msgid "Both are made in your browser from the reading already on the post. Go to Foxfire Studio, Readings and click a reading."
 msgstr ""
 
-#: includes/help-text.php:412
+#: includes/help-text.php:418
 msgid "A clip"
 msgstr ""
 
-#: includes/help-text.php:416
+#: includes/help-text.php:422
 msgid "Press Make a clip, or pick one of the Suggested clips: the opening and the three strongest moments, with why each was chosen. The play button beside one plays just that stretch."
 msgstr ""
 
-#: includes/help-text.php:417
+#: includes/help-text.php:423
 msgid "Choose the moment, tick the shapes (Square, Vertical, Wide), and press Make the clip."
 msgstr ""
 
-#: includes/help-text.php:418
+#: includes/help-text.php:424
 msgid "Watch it before you post it. The words on the picture come from the reading's captions."
 msgstr ""
 
-#: includes/help-text.php:421
+#: includes/help-text.php:427
 msgid "Use for the feed on a suggestion makes it the episode's soundbite in the podcast feed. A clip can also be made straight from a take's review (Make a clip), before the take goes on the post."
 msgstr ""
 
-#: includes/help-text.php:422
+#: includes/help-text.php:428
 msgid "The full video"
 msgstr ""
 
-#: includes/help-text.php:426
+#: includes/help-text.php:432
 msgid "Further down the reading's page, find Full-length video. Choose a picture (the post's featured image, the show's cover art, the look's colours, or any picture from the Media Library), whether to put the captions on it, and the quality."
 msgstr ""
 
-#: includes/help-text.php:427
+#: includes/help-text.php:433
 msgid "Press Make the video and keep the tab open until it finishes. The page shows the time left, and Cancel stops it."
 msgstr ""
 
-#: includes/help-text.php:428
+#: includes/help-text.php:434
 msgid "Download it, with the description (with chapter times when the reading allows), the captions file and a thumbnail for the upload."
 msgstr ""
 
-#: includes/help-text.php:431
+#: includes/help-text.php:437
 msgid "On a phone the full video goes straight to Files, Downloads (or your browser's downloads); the page shows no player for it."
 msgstr ""
 
-#: includes/help-text.php:436
+#: includes/help-text.php:442
 msgid "YouTube and SoundCloud players"
 msgstr ""
 
-#: includes/help-text.php:437
+#: includes/help-text.php:443
 msgid "Show videos and tracks as a picture that loads the player only when someone presses play."
 msgstr ""
 
-#: includes/help-text.php:439
+#: includes/help-text.php:445
 msgid "A YouTube or SoundCloud player loads all of its files, and sets its cookies, as soon as a visitor scrolls near it, whether or not anyone presses play. Settings, Embedded players has a switch for each service. With one on, each of its players shows as a picture of the video or track with a play button, at the size the player will take, and the real player loads only when a visitor presses play."
 msgstr ""
 
-#: includes/help-text.php:443
+#: includes/help-text.php:449
 msgid "Add a video or track to a post as you always have: the Embed, YouTube or SoundCloud block, a link pasted on its own line, or embed code copied from YouTube or SoundCloud."
 msgstr ""
 
-#: includes/help-text.php:444
+#: includes/help-text.php:450
 msgid "In Settings, under Embedded players, tick YouTube videos load when a visitor presses play, SoundCloud players load when a visitor presses play, or both, and press Save embedded players."
 msgstr ""
 
-#: includes/help-text.php:445
+#: includes/help-text.php:451
 msgid "Empty your page cache and open the post while logged out. You see the picture, the title and Plays from YouTube or Plays from SoundCloud. Press the play button once and the player starts in the same place."
 msgstr ""
 
-#: includes/help-text.php:451
+#: includes/help-text.php:457
 msgid "Nothing in your posts changes. Switch a service off and its ordinary players are back at once. The editor, your feeds and the REST API always show the ordinary players."
 msgstr ""
 
-#: includes/help-text.php:452
+#: includes/help-text.php:458
 msgid "The site fetches each picture and title once and keeps the picture in its uploads folder, so visitors never contact the service before they press play. YouTube videos then play from YouTube's privacy-enhanced address."
 msgstr ""
 
-#: includes/help-text.php:453
+#: includes/help-text.php:459
 msgid "One thing plays at a time: pressing play on a video or track pauses the reading player on the same page, and the reading player pauses them."
 msgstr ""
 
-#: includes/help-text.php:454
+#: includes/help-text.php:460
 msgid "On an iPhone, Safari may show the player ready and wait for a second tap before the sound starts. That is how Safari treats sound from another site. SoundCloud may also ask whether to listen in the browser or its app; that question is SoundCloud's."
 msgstr ""
 
-#: includes/help-text.php:455
+#: includes/help-text.php:461
 msgid "Clear saved pictures removes every saved picture; each comes back the next time its post is shown. A picture not shown for 90 days is removed by itself."
 msgstr ""
 
-#: includes/help-text.php:458
+#: includes/help-text.php:464
 msgid "Players added by your theme or by other plugins are left as they are. Add the paragraph from Settings, For your privacy policy to your policy when you switch this on."
 msgstr ""
 
-#: includes/help-text.php:463
+#: includes/help-text.php:469
 msgid "The podcast feed"
 msgstr ""
 
-#: includes/help-text.php:464
+#: includes/help-text.php:470
 msgid "Every reading as a podcast episode, for Apple Podcasts, Spotify and other apps."
 msgstr ""
 
-#: includes/help-text.php:466
+#: includes/help-text.php:472
 msgid "Every published post with a reading becomes an episode, newest first. The feed is off until you publish it. Foxfire Studio, Podcast feed holds the show's details and checks the feed is ready for the directories. Podcast apps fetch readings straight from the site, so those plays are not in the listening numbers; Count downloads counts them instead (see Download counting and storage offload)."
 msgstr ""
 
-#: includes/help-text.php:467
+#: includes/help-text.php:473
 msgid "Publishing the feed"
 msgstr ""
 
-#: includes/help-text.php:471
+#: includes/help-text.php:477
 msgid "Fill in the show: Show title (left empty, the Show name from Settings is used), Description, Cover art (a square JPEG or PNG, 1400 to 3000 pixels wide, ideally under 512 KB), Author, Owner email (public, and where Apple and Spotify send their codes), Category, Content and Copyright. Press Save."
 msgstr ""
 
-#: includes/help-text.php:472
+#: includes/help-text.php:478
 msgid "Fix anything listed under Ready for directories?"
 msgstr ""
 
-#: includes/help-text.php:473
+#: includes/help-text.php:479
 msgid "Tick Publish the podcast feed and save."
 msgstr ""
 
-#: includes/help-text.php:474
+#: includes/help-text.php:480
 msgid "Empty your page cache, then open the feed's address while logged out to check it."
 msgstr ""
 
-#: includes/help-text.php:475
+#: includes/help-text.php:481
 msgid "Submit the address to Apple Podcasts Connect and Spotify for Creators. They check it and list the show within a few days."
 msgstr ""
 
-#: includes/help-text.php:478
+#: includes/help-text.php:484
 msgid "Keep Lock ticked unless you are moving the show to a podcast host yourself: it asks other hosts not to import the show."
 msgstr ""
 
-#: includes/help-text.php:479
-#: includes/help-text.php:887
+#: includes/help-text.php:485
+#: includes/help-text.php:893
 #: includes/podcast.php:844
 msgid "More for podcast apps"
 msgstr ""
 
-#: includes/help-text.php:480
+#: includes/help-text.php:486
 msgid "Apps that read the Podcasting 2.0 tags show these; the rest ignore them. Host names the person on the show, with a link and picture. Support link adds a button such as a donation page, with your own words. Place says where the show is made or what it is about. Text lines holds codes a directory may ask for to prove the show is yours. Each episode also gets its chapters, its transcript and a soundbite (the stretch chosen with Use for the feed on the reading's page, else the top suggested clip)."
 msgstr ""
 
-#: includes/help-text.php:481
+#: includes/help-text.php:487
 msgid "Pings tells Podcast Index and the WebSub hub when a new reading is in the feed, so apps fetch it within minutes. Only the feed's address is sent, at most once every 10 minutes. It needs a line in your privacy policy first."
 msgstr ""
 
-#: includes/help-text.php:482
+#: includes/help-text.php:488
 msgid "Collections in the feed"
 msgstr ""
 
-#: includes/help-text.php:483
+#: includes/help-text.php:489
 msgid "A published collection with In the podcast feed ticked is an episode too, as a Bonus (its readings are also episodes of their own) or Full. See Collections and audiobooks."
 msgstr ""
 
-#: includes/help-text.php:484
+#: includes/help-text.php:490
 msgid "On the same screen: Member feeds, Sponsor messages, Storage offload, Download counting and Private folders, each with a guide of its own."
 msgstr ""
 
-#: includes/help-text.php:489
-#: includes/help-text.php:888
+#: includes/help-text.php:495
+#: includes/help-text.php:894
 #: includes/members.php:1442
 #: includes/members.php:1446
 #: includes/sponsors.php:2854
 msgid "Member feeds"
 msgstr ""
 
-#: includes/help-text.php:490
+#: includes/help-text.php:496
 msgid "A private podcast feed for each member, with readings only members can hear."
 msgstr ""
 
-#: includes/help-text.php:492
+#: includes/help-text.php:498
 msgid "Member feeds give chosen people a feed of their own, with the readings for members alongside the rest. They work whether or not the public feed is published."
 msgstr ""
 
-#: includes/help-text.php:493
+#: includes/help-text.php:499
 msgid "Setting it up"
 msgstr ""
 
-#: includes/help-text.php:497
+#: includes/help-text.php:503
 msgid "Go to Foxfire Studio, Podcast feed, Member feeds, tick Give members their own feed, and choose Who is a member by role. Administrators always have a feed, so you can check yours. Each person's profile (Users, Edit) can also say Always or Never."
 msgstr ""
 
-#: includes/help-text.php:498
+#: includes/help-text.php:504
 msgid "Optionally give the feed a title and a Become a member link, shown under a reading for members and in a lapsed member's feed. Save."
 msgstr ""
 
-#: includes/help-text.php:499
+#: includes/help-text.php:505
 msgid "For each reading, choose Who can hear this reading in its Reading audio box: Everyone, Members first, then everyone (with Days for members first), or Members only. Collections have the same choice."
 msgstr ""
 
-#: includes/help-text.php:502
+#: includes/help-text.php:508
 msgid "A reading for members shows a short message to visitors who may not hear it. Its files move to a private folder while it is for members, and come back when it opens to everyone."
 msgstr ""
 
-#: includes/help-text.php:503
+#: includes/help-text.php:509
 msgid "What a member does"
 msgstr ""
 
-#: includes/help-text.php:504
+#: includes/help-text.php:510
 msgid "Each member finds their own address on their profile (Users, Profile, under Your members podcast feed), or on any page where you place the [foxfire_member_feed] shortcode. On Podcast feed, the list Members with a feed has Email them their feed address. Then, in their app:"
 msgstr ""
 
-#: includes/help-text.php:508
+#: includes/help-text.php:514
 #: includes/members.php:1305
 msgid "Apple Podcasts on an iPhone or iPad: Library, then the ... menu, then Follow a Show by URL, and paste the address. On a Mac: File, then Follow a Show by URL."
 msgstr ""
 
-#: includes/help-text.php:509
+#: includes/help-text.php:515
 msgid "Overcast: the Open in Overcast button on the profile does it in one tap."
 msgstr ""
 
-#: includes/help-text.php:510
+#: includes/help-text.php:516
 #: includes/members.php:1306
 msgid "Pocket Casts: paste the address into the search box, then follow the show that appears."
 msgstr ""
 
-#: includes/help-text.php:511
+#: includes/help-text.php:517
 #: includes/members.php:1307
 msgid "Most other podcast apps have an Add by URL or RSS choice. Spotify cannot take private feeds."
 msgstr ""
 
-#: includes/help-text.php:514
+#: includes/help-text.php:520
 msgid "The address is private to its member. If it gets out, Make a new address on the profile: the old one stops working and the member adds the new one to their app. Feed activity, when switched on (with a privacy policy line first), shows when each feed was last fetched and marks an address fetched from more than 5 networks in a week as Maybe shared."
 msgstr ""
 
-#: includes/help-text.php:519
-#: includes/help-text.php:890
+#: includes/help-text.php:525
+#: includes/help-text.php:896
 #: includes/sponsors.php:478
 #: includes/sponsors.php:487
 #: includes/sponsors.php:1977
@@ -5482,632 +5533,632 @@ msgstr ""
 msgid "Sponsor messages"
 msgstr ""
 
-#: includes/help-text.php:520
+#: includes/help-text.php:526
 msgid "Your own recorded messages before, in the middle of and after readings in the feed."
 msgstr ""
 
-#: includes/help-text.php:522
+#: includes/help-text.php:528
 msgid "Sponsor messages are short messages placed in readings in the podcast feed: a pre-roll, a mid-roll or a post-roll. The player on the post keeps the reading as it is. Every listener gets the same file, and nothing about listeners is used. Only administrators can make them."
 msgstr ""
 
-#: includes/help-text.php:523
+#: includes/help-text.php:529
 msgid "Making a message"
 msgstr ""
 
-#: includes/help-text.php:527
+#: includes/help-text.php:533
 msgid "Go to Foxfire Studio, Sponsor messages, Add New. The title is for your list only."
 msgstr ""
 
-#: includes/help-text.php:528
+#: includes/help-text.php:534
 msgid "Under The message, fill in Who it is for (the name used in the episode notes and the chapter A word from...), Kind (Paid or gifted, or Your own), an optional Link, and the Script, one paragraph a line. Add Dates if it should run only for a while."
 msgstr ""
 
-#: includes/help-text.php:529
+#: includes/help-text.php:535
 msgid "Under Where it can go, tick Pre-roll, Mid-roll, Post-roll or several, and under Which readings choose every reading, some categories or some readings. Save."
 msgstr ""
 
-#: includes/help-text.php:530
+#: includes/help-text.php:536
 msgid "In the Recording box at the side, record it in the studio and press Use this recording there."
 msgstr ""
 
-#: includes/help-text.php:531
+#: includes/help-text.php:537
 msgid "Publish the message to start it."
 msgstr ""
 
-#: includes/help-text.php:534
+#: includes/help-text.php:540
 msgid "A paid or gifted message must say so near its start: the law in Canada and the US asks for it. The screen says whether it heard a word such as sponsored in the first seconds, as a reminder."
 msgstr ""
 
-#: includes/help-text.php:535
+#: includes/help-text.php:541
 msgid "Where messages go"
 msgstr ""
 
-#: includes/help-text.php:536
+#: includes/help-text.php:542
 msgid "Turn them on in Foxfire Studio, Podcast feed, Sponsor messages, Place sponsor messages in the feed. There, Mid-rolls sets the shortest reading that takes one and which kinds of reading may; a reading with the music bed never takes a mid-roll. Chapters gives each message a chapter listeners can skip. Episode notes sets the line at the start of the notes. Thank sponsors under the player adds a short line on the post. Members hear sponsor messages too decides member feeds. When two messages want the same place, the one with the lower Order (Post Attributes) wins."
 msgstr ""
 
-#: includes/help-text.php:537
+#: includes/help-text.php:543
 msgid "Each message's Copies in each reading's sound and Where it runs list the episodes it is in now and where it has run. Copies are made again by themselves when a message or reading changes."
 msgstr ""
 
-#: includes/help-text.php:542
+#: includes/help-text.php:548
 msgid "Download counting and storage offload"
 msgstr ""
 
-#: includes/help-text.php:543
+#: includes/help-text.php:549
 msgid "Counting podcast apps' downloads, and serving readings from a CDN or outside storage."
 msgstr ""
 
-#: includes/help-text.php:546
+#: includes/help-text.php:552
 msgid "Podcast apps download readings straight from the site, so they never show in the listening numbers. Count downloads by podcast apps (Podcast feed, under the show's details) points each episode at a short address on the site that counts the download, then sends the file. It counts to the IAB Tech Lab guidelines, version 2.3: once per listener, episode and day, once an app has asked for a minute of audio, leaving out bots and test requests. No IP address is kept."
 msgstr ""
 
-#: includes/help-text.php:550
+#: includes/help-text.php:556
 msgid "Add the counting paragraph from Settings, For your privacy policy to your policy."
 msgstr ""
 
-#: includes/help-text.php:551
+#: includes/help-text.php:557
 msgid "Tick Count downloads by podcast apps and save."
 msgstr ""
 
-#: includes/help-text.php:552
+#: includes/help-text.php:558
 msgid "Under Download counting, press Check counting. It tries the ways your web server can send files and picks one that lets every piece an app asks for pass the counter."
 msgstr ""
 
-#: includes/help-text.php:553
+#: includes/help-text.php:559
 msgid "When the feed goes public, press Make the method page, check the draft and publish it, so sponsors and listeners can read how downloads are counted."
 msgstr ""
 
-#: includes/help-text.php:556
+#: includes/help-text.php:562
 msgid "Shared networks lists places where many real listeners share one address, such as an office. Measurement prefixes adds a counting service such as OP3 in front of every public episode address; it sees listeners' IP addresses, so it needs its own line in your privacy policy, and its numbers will differ a little."
 msgstr ""
 
-#: includes/help-text.php:557
-#: includes/help-text.php:891
+#: includes/help-text.php:563
+#: includes/help-text.php:897
 #: includes/offload.php:1459
 #: includes/setup.php:357
 msgid "Storage offload"
 msgstr ""
 
-#: includes/help-text.php:558
+#: includes/help-text.php:564
 msgid "Podcast apps download whole readings, often all at once when a new one comes out. Storage offload has them fetch the files from a CDN or outside storage instead. The site always keeps its own files, and every address comes back to the site if a copy is missing or the storage stops answering. Readings for members, readings kept aside and anything private always stay on the site."
 msgstr ""
 
-#: includes/help-text.php:562
+#: includes/help-text.php:568
 msgid "Under Storage offload, choose Bunny Storage, S3-compatible storage (such as Cloudflare R2, Backblaze B2, Wasabi or Amazon S3), or A CDN in front of this site (it copies files from the site by itself; nothing is uploaded)."
 msgstr ""
 
-#: includes/help-text.php:563
+#: includes/help-text.php:569
 msgid "Fill in the storage's details as the screen describes. The password or secret key can go in wp-config.php instead, which is safer. Save."
 msgstr ""
 
-#: includes/help-text.php:564
+#: includes/help-text.php:570
 msgid "Press Check this setup. It uploads a small test file, reads it back the way podcast apps do, then deletes it."
 msgstr ""
 
-#: includes/help-text.php:565
+#: includes/help-text.php:571
 msgid "Once the check passes, tick Serve readings from the storage below and save. Copy everything now sends the existing readings at once; new ones go by themselves."
 msgstr ""
 
-#: includes/help-text.php:568
+#: includes/help-text.php:574
 msgid "Use it for chooses podcast apps and the player, or podcast apps only. Switching it off brings every address back to the site at once. Deleting the plugin never touches the outside storage: press Delete the outside copies first if you want them gone."
 msgstr ""
 
-#: includes/help-text.php:573
+#: includes/help-text.php:579
 msgid "Collections and audiobooks"
 msgstr ""
 
-#: includes/help-text.php:574
+#: includes/help-text.php:580
 msgid "Several readings joined into one, and copies ready for Audible and other stores."
 msgstr ""
 
-#: includes/help-text.php:576
+#: includes/help-text.php:582
 msgid "Making a collection"
 msgstr ""
 
-#: includes/help-text.php:580
+#: includes/help-text.php:586
 msgid "Go to Foxfire Studio, Collections, Add New, and give it a title and, if you like, some text and a featured image."
 msgstr ""
 
-#: includes/help-text.php:581
+#: includes/help-text.php:587
 msgid "In Readings in this collection, search for each post with a reading and add it, in the order they should play. Choose the Gap between readings."
 msgstr ""
 
-#: includes/help-text.php:582
+#: includes/help-text.php:588
 msgid "Tick In the podcast feed if it should be an episode, and choose Bonus or Full. Choose Who can hear this collection."
 msgstr ""
 
-#: includes/help-text.php:583
+#: includes/help-text.php:589
 msgid "Save or publish. The readings are joined into one MP3 on the site, each copied exactly as it is on its post, with a chapter for each and their captions joined."
 msgstr ""
 
-#: includes/help-text.php:586
+#: includes/help-text.php:592
 msgid "The collection has its own page with the player. If a reading changes, the collection is joined again by itself; if one is taken off its post, the collection keeps its file and says so until it is saved again."
 msgstr ""
 
-#: includes/help-text.php:587
+#: includes/help-text.php:593
 msgid "An audiobook"
 msgstr ""
 
-#: includes/help-text.php:588
+#: includes/help-text.php:594
 msgid "The Audiobook box on a saved collection makes one file for each reading to the rules of Audible (ACX), which Spotify for Authors, Authors Republic and Findaway also accept: room tone at each end, the right level and format, opening and closing credits, and a retail sample. Nothing of it is sent anywhere."
 msgstr ""
 
-#: includes/help-text.php:592
+#: includes/help-text.php:598
 msgid "Under Opening credits and Closing credits, check the scripts, press Record in the studio, read them there and press Use for the audiobook."
 msgstr ""
 
-#: includes/help-text.php:593
+#: includes/help-text.php:599
 msgid "Under Retail sample, choose the reading for the sample and where it starts (one to five minutes, starting with narration, nothing explicit)."
 msgstr ""
 
-#: includes/help-text.php:594
+#: includes/help-text.php:600
 msgid "Set the collection's featured image as the cover: square, 2400 by 2400 pixels or larger."
 msgstr ""
 
-#: includes/help-text.php:595
+#: includes/help-text.php:601
 msgid "Press Make the audiobook. It downloads a ZIP with every file, the cover and a check report."
 msgstr ""
 
-#: includes/help-text.php:598
+#: includes/help-text.php:604
 msgid "Each chapter uses the reading's audiobook copy when it has one (see Finish the sound), or is made from the post's reading. A reading with the music bed cannot be used, since the music fills the pauses where the room should be heard. The check report lists what passed and what ACX also asks that cannot be checked here."
 msgstr ""
 
-#: includes/help-text.php:599
+#: includes/help-text.php:605
 msgid "ACX takes an audiobook only for a book already on Amazon as a Kindle ebook, from a rights holder in the US, UK, Canada or Ireland. Listen through once for clicks, bumps or a word read twice before you upload."
 msgstr ""
 
-#: includes/help-text.php:604
+#: includes/help-text.php:610
 msgid "Listening numbers and reports"
 msgstr ""
 
-#: includes/help-text.php:605
+#: includes/help-text.php:611
 msgid "What listeners do with each reading, measured on your own site."
 msgstr ""
 
-#: includes/help-text.php:607
+#: includes/help-text.php:613
 msgid "Listener analytics is off on new sites. Add the paragraph from Settings, For your privacy policy to your policy first, then tick Measure listening under Settings, Listener analytics. Each screen has a Period menu at the top, and What these numbers mean at the bottom."
 msgstr ""
 
-#: includes/help-text.php:608
+#: includes/help-text.php:614
 msgid "Your own visits are left out. To test, use a logged-out browser without Do Not Track, play for a few seconds, then close the tab."
 msgstr ""
 
-#: includes/help-text.php:610
+#: includes/help-text.php:616
 msgid "Plays, how many visitors pressed play, how many were still listening at one minute and heard to the end, average speed and listening time, each compared with the period before. Below them: plays each day, top readings and sources, how visitors read or listen, and how long they take to press play. Changes lets you mark a change on a date (a new cover, a new microphone) so it shows as a flag on the charts. Raw data downloads every visit as CSV."
 msgstr ""
 
-#: includes/help-text.php:612
+#: includes/help-text.php:618
 msgid "Every reading with its plays and how much was heard. Click one for its own page: its listening curve, with the sentence that was playing where listeners leave, where its listeners came from, how they listened, the take it came from, and the clip maker and full video."
 msgstr ""
 
-#: includes/help-text.php:613
+#: includes/help-text.php:619
 msgid "Sources and the link builder"
 msgstr ""
 
-#: includes/help-text.php:614
+#: includes/help-text.php:620
 msgid "Channels and campaigns that bring listeners, with how many pressed play and heard to the end; that matters more than clicks. Channels with fewer than 30 plays are too small to compare. The Link builder makes a tagged link for each place you share a reading (choose the post, the channel, an optional campaign and a start time, then Copy link), so each one shows up as its own source."
 msgstr ""
 
-#: includes/help-text.php:616
+#: includes/help-text.php:622
 msgid "Plain sentences about what lines up with readings heard to the end: length, tempo, tags, the day and time published, where listeners came from, and your delivery. Each stays quiet until there is enough to go on, usually six readings with at least 30 plays each, and says what it still needs. Your reading, below, works from your own full takes once you have five."
 msgstr ""
 
-#: includes/help-text.php:618
+#: includes/help-text.php:624
 msgid "An email with the same numbers as the dashboard, totals only. Under Reports, tick Send the report by email on a schedule, choose How often (monthly by default, or weekly, every two weeks or every quarter), the time of day, who it goes to (up to 10 addresses) and what to include. Preview shows it as on a computer or a phone; Send now sends one at once without changing the schedule. Past reports keeps the archive."
 msgstr ""
 
-#: includes/help-text.php:619
+#: includes/help-text.php:625
 msgid "More switches"
 msgstr ""
 
-#: includes/help-text.php:620
+#: includes/help-text.php:626
 msgid "Under Settings, Listener analytics: Leave out chooses whose visits are not counted; Privacy signals respects Do Not Track and Global Privacy Control; Returning listeners tells new listeners from returning ones (it needs a policy line first); Google Analytics also sends plays to a Google Analytics already on the site; Keep sets how long visits are kept; Trusted proxies is for a site behind a CDN. Listener countries can download a free country database so countries show. Recent listens confirms that listens arrive."
 msgstr ""
 
-#: includes/help-text.php:625
+#: includes/help-text.php:631
 msgid "Settings, section by section"
 msgstr ""
 
-#: includes/help-text.php:626
+#: includes/help-text.php:632
 msgid "What each part of Foxfire Studio's Settings screen does."
 msgstr ""
 
-#: includes/help-text.php:628
+#: includes/help-text.php:634
 msgid "Settings is under Foxfire Studio, Settings (and Settings, Foxfire Studio in WordPress's own menu). The main form's choices are saved with Save settings at its bottom; Take shelf and Embedded players have save buttons of their own. Each person's own studio choices are kept in their browser; these are the starting values. Each section's heading on the screen has a Help link to its part below."
 msgstr ""
 
-#: includes/help-text.php:629
+#: includes/help-text.php:635
 msgid "Look, wording, colours and fonts"
 msgstr ""
 
-#: includes/help-text.php:630
+#: includes/help-text.php:636
 msgid "Look starts from a preset (Neutral or Dark), which replaces the wording, colours and fonts. Wording holds the words the studio and player show, such as the name in the control bar and the label on the player. Teleprompter look chooses the Foxfire Studio artwork or your WordPress theme's colours, and an optional Intro video for the studio. Colours sets the player's and studio's colours; Readability, under them, checks every pair against WCAG 2.2 AA, and Make it readable fixes only the ones that fall short. Fonts sets the reading, heading and button fonts and an optional Google Fonts link."
 msgstr ""
 
-#: includes/help-text.php:632
+#: includes/help-text.php:638
 msgid "Starting values for pace, text size, column width and the reading line; Pace by kind of reading (see Kinds of reading); which studio switches start on; and Content that can be read: posts, pages, collections and sponsor messages."
 msgstr ""
 
-#: includes/help-text.php:634
+#: includes/help-text.php:640
 msgid "How each reading is cleaned, leveled and made into an MP3: Finish for, Steps, Voice polish, Background noise reduction and Audiobook copy. See Finish the sound."
 msgstr ""
 
-#: includes/help-text.php:636
+#: includes/help-text.php:642
 msgid "Tracks to play quietly under readings, and how far under the voice. See Finish the sound, The music bed."
 msgstr ""
 
-#: includes/help-text.php:637
+#: includes/help-text.php:643
 msgid "Whisper and Whisper on this site"
 msgstr ""
 
-#: includes/help-text.php:638
+#: includes/help-text.php:644
 msgid "This browser says what the browser in use can do. Load Whisper from chooses this site or Hugging Face. Whisper on this site downloads the standard model (about 116 MB) to your hosting, so reviews load from your site; The larger model (about 570 MB) and Other languages (about 650 MB) can be downloaded the same way. Keep the page open while each download runs. Whisper always runs on the reader's own computer either way."
 msgstr ""
 
-#: includes/help-text.php:640
+#: includes/help-text.php:646
 msgid "Who sees the player, where it goes, extra custom fields to look for a reading or a Read by credit in, the skip and speed buttons, Read along, resume and Download, and the Show name. See Put the player on a post."
 msgstr ""
 
-#: includes/help-text.php:642
-msgid "Keep stats on this site keeps each take's numbers, the words you have taught Whisper and a record of each post's reading on the site, so your history follows you to any computer. Only numbers are kept, never recordings. When the plugin is deleted decides whether everything else goes too (see Update, back up or remove the plugin)."
+#: includes/help-text.php:648
+msgid "Keep stats on this site keeps each take's numbers, the words you have taught Whisper and a record of each post's reading on the site, so your history follows you to any computer. Only numbers are kept, never recordings. When a post is deleted for good decides whether its readings, captions and takes go with it (see Recordings and waiting takes). When the plugin is deleted decides whether everything else goes too (see Update, back up or remove the plugin)."
 msgstr ""
 
-#: includes/help-text.php:643
+#: includes/help-text.php:649
 msgid "Listener analytics, countries and recent listens"
 msgstr ""
 
-#: includes/help-text.php:644
+#: includes/help-text.php:650
 msgid "Measure listening and its options (see Listening numbers and reports), Listener countries, and Recent listens, a quick check that listens arrive."
 msgstr ""
 
-#: includes/help-text.php:645
-#: includes/help-text.php:876
+#: includes/help-text.php:651
+#: includes/help-text.php:882
 #: includes/shelf.php:847
 msgid "Take shelf"
 msgstr ""
 
-#: includes/help-text.php:646
+#: includes/help-text.php:652
 msgid "Keep each person's take shelf on the site, so it follows them to any computer or browser, with Space for every shelf in MB. When the space is used up, new takes stay in the browser and the studio says so. Delete every shelf on the site removes them all. Press Save take shelf settings."
 msgstr ""
 
-#: includes/help-text.php:648
+#: includes/help-text.php:654
 msgid "The two switches that make YouTube and SoundCloud players wait for play. See YouTube and SoundCloud players."
 msgstr ""
 
-#: includes/help-text.php:649
+#: includes/help-text.php:655
 msgid "Voice following, fonts, encoder and noise model on this site"
 msgstr ""
 
-#: includes/help-text.php:650
+#: includes/help-text.php:656
 msgid "Voice following on this site downloads Follow my voice's model (about 45 MB). Fonts, MP3 encoder and noise model on this site downloads copies of those too, so the studio makes no outside requests apart from Whisper and voice following when their files are not here. After changing the font link, save, then download again."
 msgstr ""
 
-#: includes/help-text.php:652
+#: includes/help-text.php:658
 msgid "A paragraph describing the listener analytics and whichever of its options are on, ready to paste into your privacy policy. It is also offered in WordPress's own privacy policy guide (Settings, Privacy)."
 msgstr ""
 
-#: includes/help-text.php:658
+#: includes/help-text.php:664
 msgid "Who can do what"
 msgstr ""
 
-#: includes/help-text.php:659
+#: includes/help-text.php:665
 msgid "Which WordPress roles can record, see the numbers and change settings."
 msgstr ""
 
-#: includes/help-text.php:664
+#: includes/help-text.php:670
 msgid "Administrators: everything, including Settings, Podcast feed, Reports, Sponsor messages, the setup wizard and every listening number."
 msgstr ""
 
-#: includes/help-text.php:665
+#: includes/help-text.php:671
 msgid "Editors: the studio on any post, Use this recording, Your progress (Overview opens it for them), Insights about their own reading, Pronunciation, Shared takes, Collections and Help. They can share a take with anyone on the site."
 msgstr ""
 
-#: includes/help-text.php:666
+#: includes/help-text.php:672
 msgid "Authors: the same on their own posts and collections. They share takes with editors and administrators."
 msgstr ""
 
-#: includes/help-text.php:667
+#: includes/help-text.php:673
 msgid "Contributors: the studio and its review on their own drafts, Your progress, Pronunciation, Shared takes and Help. Putting a reading on a post needs the right to upload files, which contributors do not have: they download the MP3, or share the take with an editor who can put it on."
 msgstr ""
 
-#: includes/help-text.php:668
+#: includes/help-text.php:674
 msgid "Subscribers: none of the plugin's screens. They can hear a take shared with them, and can be members with a feed of their own (see Member feeds)."
 msgstr ""
 
-#: includes/help-text.php:671
+#: includes/help-text.php:677
 msgid "Overview, Readings, Readings to make, Sources, Recordings and the listener half of Insights show numbers and readings across the whole site, so they are for administrators. A developer can widen this, and who may make sponsor messages or share with anyone, with the filters rrt_dashboard_cap, rrt_spot_capability and rrt_share_anyone_capability."
 msgstr ""
 
-#: includes/help-text.php:676
+#: includes/help-text.php:682
 msgid "Privacy and your privacy policy"
 msgstr ""
 
-#: includes/help-text.php:677
+#: includes/help-text.php:683
 msgid "What stays in your browser, what reaches your site, and which switches need a policy line first."
 msgstr ""
 
-#: includes/help-text.php:679
+#: includes/help-text.php:685
 msgid "Recording, cleanup, the MP3 and the Whisper review all happen in the reader's own browser. A recording reaches your site only when the reader presses Use this recording, shares a take, sends a phone take to their computer, or reviews a take while Settings, Take shelf is on. The plugin sends nothing to its authors."
 msgstr ""
 
-#: includes/help-text.php:680
+#: includes/help-text.php:686
 msgid "These are off until you switch them on, and each needs a line in your privacy policy first:"
 msgstr ""
 
-#: includes/help-text.php:684
+#: includes/help-text.php:690
 msgid "Listener analytics, and Returning listeners with it (Settings)."
 msgstr ""
 
-#: includes/help-text.php:685
+#: includes/help-text.php:691
 msgid "Google Analytics events (Settings)."
 msgstr ""
 
-#: includes/help-text.php:686
+#: includes/help-text.php:692
 msgid "Download counting, Measurement prefixes and Pings (Podcast feed)."
 msgstr ""
 
-#: includes/help-text.php:687
+#: includes/help-text.php:693
 msgid "Feed activity for member feeds (Podcast feed)."
 msgstr ""
 
-#: includes/help-text.php:688
+#: includes/help-text.php:694
 msgid "Embedded players (Settings)."
 msgstr ""
 
-#: includes/help-text.php:691
+#: includes/help-text.php:697
 msgid "Settings, Take shelf is off on new sites too. When it is on, each person's reviewed takes are kept on the site, where only they can open them, for 30 days at most. Settings, Embedded players is off as well. When it is on, visitors contact YouTube or SoundCloud only when they press play; until then the site shows its own copy of the picture."
 msgstr ""
 
-#: includes/help-text.php:692
+#: includes/help-text.php:698
 msgid "Settings, For your privacy policy gives the wording to copy. To make no outside requests at all, download Whisper, voice following, the fonts, the MP3 encoder and the noise model to your site from Settings. Readers can ask for their own stats to be exported or erased with WordPress's personal data tools (Tools, Export Personal Data and Erase Personal Data)."
 msgstr ""
 
-#: includes/help-text.php:693
-#: includes/help-text.php:893
+#: includes/help-text.php:699
+#: includes/help-text.php:899
 #: includes/safety.php:359
 msgid "Private folders"
 msgstr ""
 
-#: includes/help-text.php:694
+#: includes/help-text.php:700
 msgid "Readings for members, readings kept aside, takes sent from a phone, shared takes, take shelves and audiobook copies are kept in folders in uploads that visitors are turned away from. Foxfire Studio, Podcast feed, Private folders, Check private folders puts a small test file in each and asks for it the way a visitor would, then deletes the test files. Run it after moving the site or changing its server or security plugin."
 msgstr ""
 
-#: includes/help-text.php:695
+#: includes/help-text.php:701
 msgid "This is not legal advice."
 msgstr ""
 
-#: includes/help-text.php:700
+#: includes/help-text.php:706
 msgid "What listeners get"
 msgstr ""
 
-#: includes/help-text.php:701
+#: includes/help-text.php:707
 msgid "The player as your visitors meet it, including with a keyboard or a screen reader."
 msgstr ""
 
-#: includes/help-text.php:706
+#: includes/help-text.php:712
 msgid "Play, skip back and ahead, and speed, with a keyboard as well as a mouse or a finger. The buttons are named for screen readers, and a new speed is read out."
 msgstr ""
 
-#: includes/help-text.php:707
+#: includes/help-text.php:713
 msgid "Chapters at the post's headings, and links that start at a moment."
 msgstr ""
 
-#: includes/help-text.php:708
+#: includes/help-text.php:714
 msgid "Transcript, on every reading with captions: every line as a button that plays from there, the line being heard marked."
 msgstr ""
 
-#: includes/help-text.php:709
+#: includes/help-text.php:715
 msgid "Read along, where switched on: the post's own text lights up as it is read."
 msgstr ""
 
-#: includes/help-text.php:710
+#: includes/help-text.php:716
 msgid "Lock screen and headphone controls on phones, and resume where they left off, remembered in their own browser only."
 msgstr ""
 
-#: includes/help-text.php:711
+#: includes/help-text.php:717
 msgid "Only one thing plays at a time: starting one reading, or a YouTube or SoundCloud player, pauses the others."
 msgstr ""
 
-#: includes/help-text.php:714
+#: includes/help-text.php:720
 msgid "Settings, Readability checks every colour pair the player uses against WCAG 2.2 AA, and Make it readable fixes only those that fall short. The studio itself works without a mouse too (see Keyboard shortcuts)."
 msgstr ""
 
-#: includes/help-text.php:715
+#: includes/help-text.php:721
 msgid "A reading without captions has no Transcript or Read along. Give your readings captions (see Captions and chapters) so deaf and hard of hearing visitors, and anyone in a quiet room, can follow."
 msgstr ""
 
-#: includes/help-text.php:720
+#: includes/help-text.php:726
 msgid "Update, back up or remove the plugin"
 msgstr ""
 
-#: includes/help-text.php:721
+#: includes/help-text.php:727
 msgid "Installing a new version, what to back up, and what removing it deletes."
 msgstr ""
 
-#: includes/help-text.php:723
+#: includes/help-text.php:729
 msgid "Updating"
 msgstr ""
 
-#: includes/help-text.php:727
+#: includes/help-text.php:733
 msgid "Download the new version's zip file. Do not unzip it."
 msgstr ""
 
-#: includes/help-text.php:728
+#: includes/help-text.php:734
 msgid "In WordPress, go to Plugins, Add New Plugin, Upload Plugin, choose the zip and press Install Now."
 msgstr ""
 
-#: includes/help-text.php:729
+#: includes/help-text.php:735
 msgid "WordPress says the plugin is already installed: press Replace current with uploaded."
 msgstr ""
 
-#: includes/help-text.php:730
+#: includes/help-text.php:736
 msgid "Empty your page cache. In any studio tab that is open, press Ctrl+Shift+R; on a phone, close the tab and open the page again."
 msgstr ""
 
-#: includes/help-text.php:733
+#: includes/help-text.php:739
 msgid "Your settings, readings, takes and numbers are all kept through an update. Foxfire Studio, Help, What's new lists what changed."
 msgstr ""
 
-#: includes/help-text.php:734
+#: includes/help-text.php:740
 msgid "What to back up"
 msgstr ""
 
-#: includes/help-text.php:735
+#: includes/help-text.php:741
 msgid "Your host's usual backup of the database and the uploads folder covers everything. The database holds the settings, listening numbers, reader stats and each post's choices; uploads holds the readings, captions and the plugin's own folders (whose names start with rrt-). Keep backup copies outside the site's public folder."
 msgstr ""
 
-#: includes/help-text.php:736
+#: includes/help-text.php:742
 msgid "Removing it"
 msgstr ""
 
-#: includes/help-text.php:737
+#: includes/help-text.php:743
 msgid "Deactivate it, then Delete it on the Plugins screen. Before you do, decide on Settings, Reader stats, When the plugin is deleted:"
 msgstr ""
 
-#: includes/help-text.php:741
+#: includes/help-text.php:747
 msgid "Left unticked (the default), everything stays, so reinstalling loses nothing. Only the settings and the plugin's copies of the fonts, MP3 encoder and noise model are removed."
 msgstr ""
 
-#: includes/help-text.php:742
+#: includes/help-text.php:748
 msgid "Ticked, everything else goes too: reader stats, listener analytics, cue marks, pronunciation notes, words taught for one post, shared and sent takes, take shelves, each post's reading, captions and Read by links, readings kept aside, collections and their joined files, audiobook copies, saved YouTube and SoundCloud pictures, and the Whisper files on this site."
 msgstr ""
 
-#: includes/help-text.php:745
-msgid "Either way, MP3s and captions in the Media Library are never deleted, readings kept for members go back to their public place first, and outside storage is never touched (press Delete the outside copies under Storage offload first if you want them gone)."
-msgstr ""
-
 #: includes/help-text.php:751
-msgid "Common problems and what usually fixes them."
-msgstr ""
-
-#: includes/help-text.php:753
-msgid "In the studio"
+msgid "Either way, removing the plugin never deletes MP3s and captions in the Media Library, readings kept for members go back to their public place first, and outside storage is never touched (press Delete the outside copies under Storage offload first if you want them gone)."
 msgstr ""
 
 #: includes/help-text.php:757
-msgid "The studio or player looks out of date after an update: empty the page cache, then press Ctrl+Shift+R in the studio (on a phone, close the tab and open the page again)."
-msgstr ""
-
-#: includes/help-text.php:758
-msgid "The microphone was not available: the browser was not allowed to use it. Click the lock or settings icon beside the page's address, allow the microphone, and reload. On an iPhone: Settings, Apps, Safari, Microphone."
+msgid "Common problems and what usually fixes them."
 msgstr ""
 
 #: includes/help-text.php:759
-msgid "The recording was very quiet: move closer to the microphone, or use a USB microphone. Check microphone (Controls, Practice) shows the level before you record."
+msgid "In the studio"
 msgstr ""
 
-#: includes/help-text.php:760
-msgid "The script runs ahead of you: lower Pace (Controls, Reading), or switch on Follow my voice."
+#: includes/help-text.php:763
+msgid "The studio or player looks out of date after an update: empty the page cache, then press Ctrl+Shift+R in the studio (on a phone, close the tab and open the page again)."
 msgstr ""
 
-#: includes/help-text.php:761
-msgid "Follow my voice turns itself off: the line under the script says why. Download voice following to this site in Settings, or close other tabs."
-msgstr ""
-
-#: includes/help-text.php:762
-msgid "A take is missing after a crash: open the studio for the same post again and choose Recover it."
+#: includes/help-text.php:764
+msgid "The microphone was not available: the browser was not allowed to use it. Click the lock or settings icon beside the page's address, allow the microphone, and reload. On an iPhone: Settings, Apps, Safari, Microphone."
 msgstr ""
 
 #: includes/help-text.php:765
-msgid "In the review"
+msgid "The recording was very quiet: move closer to the microphone, or use a USB microphone. Check microphone (Controls, Practice) shows the level before you record."
 msgstr ""
 
-#: includes/help-text.php:769
-msgid "The Whisper review stays on loading: the first load is large. Wait, or download Whisper to this site from Settings."
+#: includes/help-text.php:766
+msgid "The script runs ahead of you: lower Pace (Controls, Reading), or switch on Follow my voice."
 msgstr ""
 
-#: includes/help-text.php:770
-msgid "Whisper did not hear enough: the take was very short or very quiet. Use Check microphone and record a longer stretch."
+#: includes/help-text.php:767
+msgid "Follow my voice turns itself off: the line under the script says why. Download voice following to this site in Settings, or close other tabs."
+msgstr ""
+
+#: includes/help-text.php:768
+msgid "A take is missing after a crash: open the studio for the same post again and choose Recover it."
 msgstr ""
 
 #: includes/help-text.php:771
-msgid "Read words show grey as not read: Whisper heard a stretch wrongly. Review again with the larger model (Controls, Recording, Model)."
+msgid "In the review"
 msgstr ""
 
-#: includes/help-text.php:772
-msgid "A reading in another language reviews badly: check the post's Reading language in its Reading audio box. Download the other-languages models to this site in Settings so they load quickly."
-msgstr ""
-
-#: includes/help-text.php:773
-msgid "The review was lost: it lives only in its tab, so a reload loses it. The take is still on the shelf; open it again from there."
+#: includes/help-text.php:775
+msgid "The Whisper review stays on loading: the first load is large. Wait, or download Whisper to this site from Settings."
 msgstr ""
 
 #: includes/help-text.php:776
-msgid "On a phone"
+msgid "Whisper did not hear enough: the take was very short or very quiet. Use Check microphone and record a longer stretch."
 msgstr ""
 
-#: includes/help-text.php:780
-msgid "A phone closed the page during a review: open the studio again; the take is on the shelf. Next time use Send to my computer for long takes."
+#: includes/help-text.php:777
+msgid "Read words show grey as not read: Whisper heard a stretch wrongly. Review again with the larger model (Controls, Recording, Model)."
 msgstr ""
 
-#: includes/help-text.php:781
-msgid "Five takes are already waiting for your computer: open the studio on the computer and open or delete one (A take from your phone)."
+#: includes/help-text.php:778
+msgid "A reading in another language reviews badly: check the post's Reading language in its Reading audio box. Download the other-languages models to this site in Settings so they load quickly."
+msgstr ""
+
+#: includes/help-text.php:779
+msgid "The review was lost: it lives only in its tab, so a reload loses it. The take is still on the shelf; open it again from there."
 msgstr ""
 
 #: includes/help-text.php:782
+msgid "On a phone"
+msgstr ""
+
+#: includes/help-text.php:786
+msgid "A phone closed the page during a review: open the studio again; the take is on the shelf. Next time use Send to my computer for long takes."
+msgstr ""
+
+#: includes/help-text.php:787
+msgid "Five takes are already waiting for your computer: open the studio on the computer and open or delete one (A take from your phone)."
+msgstr ""
+
+#: includes/help-text.php:788
 msgid "The take shelf on the site is full: the take stays in the browser, and the studio says so. Delete old takes under Foxfire Studio, Recordings, or raise Space for every shelf in Settings, Take shelf."
 msgstr ""
 
-#: includes/help-text.php:785
+#: includes/help-text.php:791
 msgid "Clips, videos and collections"
 msgstr ""
 
-#: includes/help-text.php:789
+#: includes/help-text.php:795
 msgid "A video stops partway: keep the tab in front and the computer awake until it finishes, and close other heavy tabs. Choose Smaller file for a long reading."
 msgstr ""
 
-#: includes/help-text.php:790
+#: includes/help-text.php:796
 msgid "A collection will not join a reading: the reading must be a constant-bitrate MP3 on this site. Make it again in the studio, or leave it out."
 msgstr ""
 
-#: includes/help-text.php:791
+#: includes/help-text.php:797
 msgid "The audiobook check fails on a chapter with the music bed: make that chapter's audiobook copy from the review (Finish for, Keep as this post's audiobook chapter)."
 msgstr ""
 
-#: includes/help-text.php:794
+#: includes/help-text.php:800
 #: includes/shelf.php:852
 msgid "On the site"
 msgstr ""
 
-#: includes/help-text.php:798
+#: includes/help-text.php:804
 msgid "No listens appear: analytics is off, or you tested while logged in, or your browser sends Do Not Track."
 msgstr ""
 
-#: includes/help-text.php:799
+#: includes/help-text.php:805
 msgid "Every listener comes from the same place: the site is behind a proxy such as Cloudflare. List it under Settings, Listener analytics, Trusted proxies."
 msgstr ""
 
-#: includes/help-text.php:800
+#: includes/help-text.php:806
 msgid "A directory turns the feed down: look at Ready for directories? on Podcast feed. The cover art's size and the owner email are the usual causes."
 msgstr ""
 
-#: includes/help-text.php:801
+#: includes/help-text.php:807
 msgid "Check private folders reports a folder as open: the web server is not reading the folder's own rules. Ask your host to allow .htaccess files in uploads, or to block those folders another way."
 msgstr ""
 
-#: includes/help-text.php:802
+#: includes/help-text.php:808
 msgid "Players look unstyled or the page shows old pictures after a change: empty the page cache and check the page while logged out."
 msgstr ""
 
-#: includes/help-text.php:818
+#: includes/help-text.php:824
+msgid "Readings of deleted posts: Recordings says when a reading's post is in the Trash or deleted, or its file is gone, and has Delete for every reading no longer on a live post, plus Clear readings of deleted posts. When a post is deleted for good, its readings, captions and takes now go with it (Settings, Reader stats)."
+msgstr ""
+
+#: includes/help-text.php:827
 msgid "Small fixes: a misheard first or last word in the review is a misread word, Follow my voice finishes a take whose last word was misheard, and the switches in the studio's Controls panel line up."
 msgstr ""
 
-#: includes/help-text.php:821
+#: includes/help-text.php:830
 msgid "Fuller help: 28 guides in eight groups, a Start here guide for site owners and for readers, new guides for Settings, finishing the sound, captions and chapters, recordings, kinds of reading, who can do what, updating and removing the plugin, and what listeners get. Settings, Podcast feed and Recordings have a Help with this section link under each section."
 msgstr ""
 
-#: includes/help-text.php:824
-msgid "YouTube and SoundCloud players can wait for play: switch on Settings, Embedded players, and each one shows as a picture with a play button, so the page loads faster and visitors contact the service only when they press play."
-msgstr ""
-
-#: includes/help-text.php:886
+#: includes/help-text.php:892
 #: includes/podcast.php:720
 msgid "Ready for directories?"
 msgstr ""
 
-#: includes/help-text.php:889
+#: includes/help-text.php:895
 #: includes/members.php:1498
 msgid "Members with a feed"
 msgstr ""
@@ -9749,13 +9800,6 @@ msgstr ""
 msgid "Open in the teleprompter"
 msgstr ""
 
-#: includes/sent.php:363
-#: includes/shelf.php:936
-#: views/teleprompter.php:452
-#: assets/js/record.js:268
-msgid "Delete"
-msgstr ""
-
 #: includes/sent.php:366
 msgid "Nothing waiting. On a phone, phone take mode saves each take here as it is recorded."
 msgstr ""
@@ -11173,6 +11217,99 @@ msgstr ""
 msgid "WordPress defaults"
 msgstr ""
 
+#: includes/tidy.php:95
+msgid "post deleted"
+msgstr ""
+
+#: includes/tidy.php:97
+msgid "yes, post in the Trash"
+msgstr ""
+
+#: includes/tidy.php:97
+msgid "no, post in the Trash"
+msgstr ""
+
+#: includes/tidy.php:106
+msgid "file deleted"
+msgstr ""
+
+#: includes/tidy.php:226
+msgid "That recording is no longer listed."
+msgstr ""
+
+#: includes/tidy.php:229
+msgid "That reading is on its post. Take it off the post first (on its page under Foxfire Studio, Readings)."
+msgstr ""
+
+#: includes/tidy.php:355
+msgid "Remove from list"
+msgstr ""
+
+#: includes/tidy.php:356
+msgid "Remove this row from the list?"
+msgstr ""
+
+#: includes/tidy.php:356
+msgid "Delete this reading and its captions for good?"
+msgstr ""
+
+#: includes/tidy.php:357
+msgid "Yes, remove"
+msgstr ""
+
+#: includes/tidy.php:357
+msgid "Yes, delete for good"
+msgstr ""
+
+#: includes/tidy.php:361
+#: includes/tidy.php:374
+#: views/teleprompter.php:541
+#: views/teleprompter.php:568
+#: assets/js/audiobook.js:556
+#: assets/js/cues.js:412
+#: assets/js/pronounce.js:325
+#: assets/js/pronounce.js:418
+#: assets/js/pronounce.js:553
+#: assets/js/video.js:615
+msgid "Cancel"
+msgstr ""
+
+#. translators: %d: how many rows
+#: includes/tidy.php:370
+#, php-format
+msgid "Clear readings of deleted posts (%d)"
+msgid_plural "Clear readings of deleted posts (%d)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/tidy.php:371
+msgid "Delete the readings and captions of every post that is in the Trash or deleted, and remove the rows whose file is gone? Files another post still uses stay. This cannot be undone."
+msgstr ""
+
+#: includes/tidy.php:374
+msgid "Yes, clear them"
+msgstr ""
+
+#. translators: %s: a post title
+#: includes/tidy.php:397
+#, php-format
+msgid "Removed from the list. The file stays, because \"%s\" still uses it."
+msgstr ""
+
+#: includes/tidy.php:399
+msgid "Deleted the reading and its captions."
+msgstr ""
+
+#: includes/tidy.php:401
+msgid "Removed from the list."
+msgstr ""
+
+#. translators: 1: rows removed, 2: files deleted
+#: includes/tidy.php:424
+#, php-format
+msgid "Cleared %1$d rows and deleted %2$d files."
+msgstr ""
+
 #: includes/video.php:120
 msgid "Full-length video"
 msgstr ""
@@ -12006,17 +12143,6 @@ msgstr ""
 
 #: views/teleprompter.php:540
 msgid "Bring back the original"
-msgstr ""
-
-#: views/teleprompter.php:541
-#: views/teleprompter.php:568
-#: assets/js/audiobook.js:556
-#: assets/js/cues.js:412
-#: assets/js/pronounce.js:325
-#: assets/js/pronounce.js:418
-#: assets/js/pronounce.js:553
-#: assets/js/video.js:615
-msgid "Cancel"
 msgstr ""
 
 #: views/teleprompter.php:545
@@ -13408,7 +13534,7 @@ msgstr ""
 msgid "Each point is the daily average for a week, since the period is long."
 msgstr ""
 
-#: assets/js/dashboard.js:430
+#: assets/js/dashboard.js:450
 #: assets/js/video.js:843
 msgid "Copied."
 msgstr ""

@@ -1303,13 +1303,27 @@ function rrt_dash_page_recordings() {
 	if ( function_exists( 'rrt_kept_notice' ) ) {
 		rrt_kept_notice();
 	}
+	if ( function_exists( 'rrt_tidy_notice' ) ) {
+		rrt_tidy_notice();
+	}
 	$kept_recs = function_exists( 'rrt_kept_rec_ids' ) ? rrt_kept_rec_ids() : array();
+	$tidy      = function_exists( 'rrt_tidy_label' ) && current_user_can( 'delete_posts' );
 	$rows = $wpdb->get_results( 'SELECT * FROM ' . rrt_table( 'recordings' ) . ' ORDER BY COALESCE(published_at, created_at) DESC', ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery, WordPress.DB.PreparedSQL.NotPrepared -- only the plugin's own table name and whole numbers
 	echo '<div class="rrt-tools"><p>' . esc_html__( 'Every MP3 that has been a post\'s reading.', 'foxfire-studio' ) . '</p>';
+	if ( $tidy ) {
+		$leftover = 0;
+		foreach ( $rows as $r ) {
+			$leftover += rrt_tidy_is_leftover( $r, isset( $kept_recs[ (int) $r['id'] ] ) ) ? 1 : 0;
+		}
+		rrt_tidy_clear_form( $leftover );
+	}
 	rrt_dash_csv_button( 'rrt-t-recordings', 'recordings' );
 	echo '</div><table class="widefat striped rrt-table rrt-sortable" id="rrt-t-recordings"><thead><tr>';
 	foreach ( array( __( 'Post', 'foxfire-studio' ), __( 'File', 'foxfire-studio' ), __( 'Length', 'foxfire-studio' ), __( 'Size', 'foxfire-studio' ), __( 'Bitrate', 'foxfire-studio' ), __( 'Tempo', 'foxfire-studio' ), __( 'Went live', 'foxfire-studio' ), __( 'On the post now', 'foxfire-studio' ), __( 'Edited', 'foxfire-studio' ), __( 'How it got there', 'foxfire-studio' ) ) as $i => $h ) {
 		echo '<th' . ( in_array( $i, array( 2, 3, 4, 5 ), true ) ? ' class="num"' : '' ) . ' data-sort="' . ( in_array( $i, array( 2, 3, 4, 5 ), true ) ? 'num' : 'text' ) . '"><button type="button">' . esc_html( $h ) . '</button></th>';
+	}
+	if ( $tidy ) {
+		echo '<th class="rrt-no-csv"><span class="screen-reader-text">' . esc_html__( 'Delete', 'foxfire-studio' ) . '</span></th>';
 	}
 	echo '</tr></thead><tbody>';
 	$how = array( 'upload' => __( 'Use this recording', 'foxfire-studio' ), 'manual' => __( 'Chosen by hand', 'foxfire-studio' ), 'existing' => __( 'Already there in 0.9.0', 'foxfire-studio' ) );
@@ -1327,11 +1341,26 @@ function rrt_dash_page_recordings() {
 		echo '<td class="num" data-v="' . esc_attr( $r['bitrate_kbps'] ) . '">' . esc_html( $r['bitrate_kbps'] ? $r['bitrate_kbps'] . ' kbps' : '' ) . '</td>';
 		echo '<td class="num" data-v="' . esc_attr( $r['tempo_wpm'] ) . '">' . esc_html( $r['tempo_wpm'] ? $r['tempo_wpm'] . ' wpm' : '' ) . '</td>';
 		echo '<td data-v="' . esc_attr( $r['published_at'] ) . '">' . esc_html( $r['published_at'] ? wp_date( 'M j, Y', strtotime( $r['published_at'] . ' UTC' ) ) : '' ) . '</td>';
-		echo '<td>' . ( $r['is_current'] ? 'yes' : ( $is_kept ? '<a href="#rrt-kept">' . esc_html__( 'kept aside', 'foxfire-studio' ) . '</a>' : 'no' ) ) . '</td><td>' . ( $r['edited'] ? 'yes' : 'no' ) . '</td>';
-		echo '<td>' . esc_html( isset( $how[ $r['source'] ] ) ? $how[ $r['source'] ] : $r['source'] ) . '</td></tr>';
+		if ( $tidy ) {
+			/* 1.36.2: what became of the reading, its post and its file. */
+			$rrt_lbl = rrt_tidy_label( $r, $is_kept );
+			echo '<td data-v="' . esc_attr( $rrt_lbl ) . '">' . ( $is_kept && ! $r['is_current'] && 0 === strpos( $rrt_lbl, __( 'kept aside', 'foxfire-studio' ) ) ? '<a href="#rrt-kept">' . esc_html( $rrt_lbl ) . '</a>' : esc_html( $rrt_lbl ) ) . '</td>';
+		} else {
+			echo '<td>' . ( $r['is_current'] ? 'yes' : ( $is_kept ? '<a href="#rrt-kept">' . esc_html__( 'kept aside', 'foxfire-studio' ) . '</a>' : 'no' ) ) . '</td>';
+		}
+		echo '<td>' . ( $r['edited'] ? 'yes' : 'no' ) . '</td>';
+		echo '<td>' . esc_html( isset( $how[ $r['source'] ] ) ? $how[ $r['source'] ] : $r['source'] ) . '</td>';
+		if ( $tidy ) {
+			echo '<td class="rrt-no-csv">';
+			if ( rrt_tidy_can_delete( $r, $is_kept ) ) {
+				rrt_tidy_row_form( $r );
+			}
+			echo '</td>';
+		}
+		echo '</tr>';
 	}
 	if ( ! $rows ) {
-		echo '<tr><td colspan="10">' . esc_html__( 'No recordings yet.', 'foxfire-studio' ) . '</td></tr>';
+		echo '<tr><td colspan="' . ( $tidy ? 11 : 10 ) . '">' . esc_html__( 'No recordings yet.', 'foxfire-studio' ) . '</td></tr>';
 	}
 	echo '</tbody></table>';
 	/* Readings kept aside (1.8.0). */

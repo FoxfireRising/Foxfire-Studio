@@ -4,7 +4,7 @@ Tags: teleprompter, podcast, audio, recording, accessibility
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.36.1
+Stable tag: 1.36.2
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -191,6 +191,9 @@ Embedded players (1.35.0), when switched on, make this site ask YouTube or Sound
 The full list of what the plugin stores and sends is in PRIVACY.md in the repository: https://github.com/FoxfireRising/Foxfire-Studio/blob/main/PRIVACY.md
 
 == Changelog ==
+
+= 1.36.2 =
+Readings of deleted posts. On Foxfire Studio, Recordings, the "On the post now" column now says when a reading's post is in the Trash or deleted, and when its file is gone. A reading that is no longer on its post can be deleted from its row, with its captions and cover picture, after a question on the page; a file another post still uses is kept. Clear readings of deleted posts deletes every reading left behind by deleted posts in one go. From now on, deleting a post for good also deletes its readings, captions, waiting phone takes and take shelf takes; Settings, Reader stats has a switch to turn that off. Moving a post to the Trash deletes nothing. Nothing else changes.
 
 = 1.36.1 =
 Small fixes. When Whisper mishears the very first or last word of a script and the word is three letters or fewer ("end" heard as "and"), the review shows it as a misread word, where it had listed the heard word as added and the script's word as not reached. With Follow my voice on, a misheard last word no longer leaves the reading waiting: once a word is heard where only the last word is left, the script ends when no new word has come for a moment, and the take finishes by itself as usual. In the studio's Controls panel every switch, slider and menu now lines up, with each "?" in a column of its own. The studio's background workers (the MP3 encoder, the noise cleanup, the sound worker, voice following and the stronger cleanup) now get a new address whenever their file changes, so a phone that keeps files for a long time fetches the new one. Nothing else changes.

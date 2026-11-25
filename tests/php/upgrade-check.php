@@ -138,6 +138,11 @@ if ( function_exists( 'rrt_embeds_settings' ) ) {
 	$check( array( 'yt' => false, 'sc' => false ) === rrt_embeds_settings() && ! is_dir( rrt_embeds_dir() ), 'an upgraded site has both Embedded players switches off, and no saved pictures', wp_json_encode( rrt_embeds_settings() ) );
 }
 
+/* Readings of deleted posts (1.36.2): an upgraded site deletes a post's readings with it from now on, and has no readings marked for deletion. */
+if ( function_exists( 'rrt_tidy_on' ) ) {
+	$check( true === rrt_settings()['stats']['tidy_on_delete'] && rrt_tidy_on(), 'an upgraded site has When a post is deleted for good on' );
+}
+
 echo "\n$pass passed, $fail failed\n";
 if ( $fail ) {
 	exit( 1 );

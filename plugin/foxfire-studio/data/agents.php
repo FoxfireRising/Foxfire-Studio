@@ -1,8 +1,8 @@
 <?php
 /*
  * Podcast app, bot and device names for download counting (1.24.0).
- * Made by tools/lists/agents.py from OPAWG user-agents-v2 (d6a4ffd 2026-11-17) and
- * OP3's extra bot list (00e5119 2026-11-22), both MIT licensed: see agents-LICENSE.txt.
+ * Made by tools/lists/agents.py from OPAWG user-agents-v2 (74b547c 2026-11-24) and
+ * OP3's extra bot list (ba45224 2026-11-24), both MIT licensed: see agents-LICENSE.txt.
  * Do not edit by hand.
  */
 
@@ -11,8 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 return array(
-	'built' => '2026-11-22',
-	'source' => 'OPAWG 2026-11-17, OP3 2026-11-22',
+	'built' => '2026-11-24',
+	'source' => 'OPAWG 2026-11-24, OP3 2026-11-24',
 	'bots' => array(
 		array( '7Siters Crawler', '/^7Siters/' ),
 		array( 'AAABot - unknown bot', '/AAABot/' ),
@@ -97,7 +97,7 @@ return array(
 		array( 'DuckDuckBot', '/DuckDuckBot/' ),
 		array( 'DutchPodcastScraper', '/^DutchPodcastScraper\\//' ),
 		array( 'F-Secure Riddler', '/^Riddler /' ),
-		array( 'Facebook Bot', '/FacebookBot|f?acebookexternalhit\\/?|^podcastbot$|Facebot|facebookexternalua|^facebookplatform\\/|^"?meta-externalagent\\/\\d/' ),
+		array( 'Facebook Bot', '/FacebookBot|f?acebookexternalhit\\/?|^podcastbot$|Facebot|facebookexternalua|^facebookplatform\\/|^"?meta-externalagent\\/\\d|meta-webindexer\\/\\d/' ),
 		array( 'Feedly', '/^Feedly\\//' ),
 		array( 'Feedspot Fetcher', '/https:\\/\\/www\\.feedspot\\.com\\/fs\\/fetcher/' ),
 		array( 'Fetch Container', '/^fetch-container\\/\\d/' ),
@@ -1111,6 +1111,7 @@ return array(
 		'Mozilla/5.0 (podcast-downloader)' => true,
 		'Mozilla/5.0 (podcast-fetcher)' => true,
 		'Mozilla/5.0 (podcast-harvest; research)' => true,
+		'Mozilla/5.0 (podcast-player-check)' => true,
 		'Mozilla/5.0 (PrettyData Industry Watch)' => true,
 		'Mozilla/5.0 (research)' => true,
 		'Mozilla/5.0 (signalmusic podcast-dl)' => true,
@@ -1197,6 +1198,7 @@ return array(
 		'podradio2-audio-reachability/0.2 (+aiohttp from SE)' => true,
 		'Podscud/1.0 (Enclosure Liveness; +https://podscud.com)' => true,
 		'Podscud/1.0 (Feed Fetcher; +https://podscud.com)' => true,
+		'PodSync/1.1 (Raspberry Pi podcast downloader)' => true,
 		'Podzone/1.0 (+https://podzone.fm; podcast indexing)' => true,
 		'PoliticalOS/0.1 (podcast archive; research)' => true,
 		'PopfilterPodcastIndexer/1.0' => true,

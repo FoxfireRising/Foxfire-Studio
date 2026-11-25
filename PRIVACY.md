@@ -387,6 +387,7 @@ The WAV download and the captions (.vtt) file carry no tags.
 | Sent reports (archive) | Until the plugin's data is deleted, with the stats tables |
 | Cue marks, a post's kind of reading and reading language, pronunciation notes, and words taught for one post | Until removed in the teleprompter, the post is deleted (a reader's own notes: the user is deleted or the personal data eraser runs), or on uninstall with the stats tables |
 | A post's reading, captions and Read by links | Until changed in the post's Reading audio box, or on uninstall with the stats tables (the files themselves stay in the Media Library) |
+| Reading files and their rows on Recordings (1.36.2) | Until deleted on Recordings (Delete, Clear readings of deleted posts), or the post is deleted for good while Settings, Reader stats, When a post is deleted for good is on (its readings, captions, phone takes and take shelf takes go with it; a file another post uses stays). Moving a post to the Trash deletes nothing |
 | Shared take audio | 14 days at most: deleted within the hour once a share ends, or at once with End now |
 | Takes sent from a phone | Until used, downloaded or deleted on a computer, 14 days at most, or until the user is deleted |
 | Recording setups and their band measurements (1.13.0) | Until forgotten in Hear the polish, the user is deleted, the personal data eraser runs, or on uninstall with the stats tables |

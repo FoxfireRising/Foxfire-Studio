@@ -376,6 +376,12 @@ function rrt_help_topics() {
 				array( 'p', __( 'Foxfire Studio, Recordings has up to four lists.', 'foxfire-studio' ) ),
 				array( 'h', 'list', __( 'Every recording', 'foxfire-studio' ) ),
 				array( 'p', __( 'Every MP3 that has been a post\'s reading, with its length, size, bitrate, tempo, when it went live, whether it is on the post now, whether it was edited, and how it got there. Download CSV saves the list.', 'foxfire-studio' ) ),
+				array( 'p', __( 'On the post now says what became of each reading: yes, no (taken off or replaced), kept aside, post in the Trash, or post deleted, with file deleted added when its MP3 is no longer on the site.', 'foxfire-studio' ) ),
+				array( 'h', 'delete', __( 'Deleting old readings', 'foxfire-studio' ) ),
+				array( 'p', __( 'Every reading that is no longer on a live post has a Delete button at the end of its row: readings taken off or replaced, and readings of posts in the Trash or deleted. Delete asks once on the page; Yes, delete for good removes the MP3, the captions that came with it and the row. A row whose file is already gone has Remove from list instead. The reading that is on a live post has no Delete; take it off the post first (its page under Foxfire Studio, Readings, Take off the post).', 'foxfire-studio' ) ),
+				array( 'p', __( 'Clear readings of deleted posts, above the list, appears when there are any. It does the same for every reading whose post is in the Trash or deleted, and removes every row whose file is gone.', 'foxfire-studio' ) ),
+				array( 'note', __( 'A file another post still uses is never deleted: the row goes, the file stays, and the message says which post uses it. Deleting cannot be undone. Listening history in Reports and Insights stays.', 'foxfire-studio' ) ),
+				array( 'p', __( 'When a post is deleted for good (Delete Permanently, Empty Trash, or WordPress emptying the Trash after 30 days), its readings, captions, waiting phone takes, take shelf takes and rows here go with it, while Settings, Reader stats, When a post is deleted for good is ticked (the default). A post in the Trash keeps its reading, so restoring it brings the reading back.', 'foxfire-studio' ) ),
 				array( 'h', 'kept', __( 'Kept aside', 'foxfire-studio' ) ),
 				array( 'p', __( 'Readings taken off their post with Take off the post (on the reading\'s page under Foxfire Studio, Readings). Each is kept in a folder visitors cannot open, and can be played here. Put back returns it to the Media Library at the address it had, with its captions, so it is the same episode in the podcast feed and its listening history carries on. Delete for good removes it after asking.', 'foxfire-studio' ) ),
 				array( 'h', 'sent', __( 'Sent from your phone', 'foxfire-studio' ) ),
@@ -639,7 +645,7 @@ function rrt_help_topics() {
 				array( 'h', 'player', __( 'Listening player', 'foxfire-studio' ) ),
 				array( 'p', __( 'Who sees the player, where it goes, extra custom fields to look for a reading or a Read by credit in, the skip and speed buttons, Read along, resume and Download, and the Show name. See Put the player on a post.', 'foxfire-studio' ) ),
 				array( 'h', 'stats', __( 'Reader stats', 'foxfire-studio' ) ),
-				array( 'p', __( 'Keep stats on this site keeps each take\'s numbers, the words you have taught Whisper and a record of each post\'s reading on the site, so your history follows you to any computer. Only numbers are kept, never recordings. When the plugin is deleted decides whether everything else goes too (see Update, back up or remove the plugin).', 'foxfire-studio' ) ),
+				array( 'p', __( 'Keep stats on this site keeps each take\'s numbers, the words you have taught Whisper and a record of each post\'s reading on the site, so your history follows you to any computer. Only numbers are kept, never recordings. When a post is deleted for good decides whether its readings, captions and takes go with it (see Recordings and waiting takes). When the plugin is deleted decides whether everything else goes too (see Update, back up or remove the plugin).', 'foxfire-studio' ) ),
 				array( 'h', 'analytics', __( 'Listener analytics, countries and recent listens', 'foxfire-studio' ) ),
 				array( 'p', __( 'Measure listening and its options (see Listening numbers and reports), Listener countries, and Recent listens, a quick check that listens arrive.', 'foxfire-studio' ) ),
 				array( 'h', 'shelf', __( 'Take shelf', 'foxfire-studio' ) ),
@@ -742,7 +748,7 @@ function rrt_help_topics() {
 						__( 'Ticked, everything else goes too: reader stats, listener analytics, cue marks, pronunciation notes, words taught for one post, shared and sent takes, take shelves, each post\'s reading, captions and Read by links, readings kept aside, collections and their joined files, audiobook copies, saved YouTube and SoundCloud pictures, and the Whisper files on this site.', 'foxfire-studio' ),
 					),
 				),
-				array( 'p', __( 'Either way, MP3s and captions in the Media Library are never deleted, readings kept for members go back to their public place first, and outside storage is never touched (press Delete the outside copies under Storage offload first if you want them gone).', 'foxfire-studio' ) ),
+				array( 'p', __( 'Either way, removing the plugin never deletes MP3s and captions in the Media Library, readings kept for members go back to their public place first, and outside storage is never touched (press Delete the outside copies under Storage offload first if you want them gone).', 'foxfire-studio' ) ),
 			),
 		),
 		'trouble'     => array(
@@ -814,14 +820,14 @@ function rrt_help_topics() {
  */
 function rrt_help_news() {
 	return array(
+		'1.36.2' => array(
+			__( 'Readings of deleted posts: Recordings says when a reading\'s post is in the Trash or deleted, or its file is gone, and has Delete for every reading no longer on a live post, plus Clear readings of deleted posts. When a post is deleted for good, its readings, captions and takes now go with it (Settings, Reader stats).', 'foxfire-studio' ),
+		),
 		'1.36.1' => array(
 			__( 'Small fixes: a misheard first or last word in the review is a misread word, Follow my voice finishes a take whose last word was misheard, and the switches in the studio\'s Controls panel line up.', 'foxfire-studio' ),
 		),
 		'1.36.0' => array(
 			__( 'Fuller help: 28 guides in eight groups, a Start here guide for site owners and for readers, new guides for Settings, finishing the sound, captions and chapters, recordings, kinds of reading, who can do what, updating and removing the plugin, and what listeners get. Settings, Podcast feed and Recordings have a Help with this section link under each section.', 'foxfire-studio' ),
-		),
-		'1.35.0' => array(
-			__( 'YouTube and SoundCloud players can wait for play: switch on Settings, Embedded players, and each one shows as a picture with a play button, so the page loads faster and visitors contact the service only when they press play.', 'foxfire-studio' ),
 		),
 	);
 }

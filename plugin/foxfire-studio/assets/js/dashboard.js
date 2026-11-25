@@ -328,6 +328,26 @@
 		});
 	}
 
+	/* Recordings (1.36.2): Cancel closes the question that Delete or Clear opened. */
+	function tidy() {
+		document.querySelectorAll('.rrt-tidy-cancel').forEach(function (b) {
+			b.addEventListener('click', function () {
+				var d = b.closest('details');
+				if (!d) { return; }
+				d.open = false;
+				var s = d.querySelector('summary');
+				if (s) { s.focus(); }
+			});
+		});
+		document.querySelectorAll('details.rrt-tidy-ask').forEach(function (d) {
+			d.addEventListener('toggle', function () {
+				if (!d.open) { return; }
+				var yes = d.querySelector('button[type=submit]');
+				if (yes) { yes.focus(); }
+			});
+		});
+	}
+
 	/* Sortable tables: click a column heading. */
 	function sorting() {
 		document.querySelectorAll('table.rrt-sortable').forEach(function (t) {
@@ -362,7 +382,7 @@
 				var lines = [];
 				Array.prototype.forEach.call(t.rows, function (r) {
 					if (r.hidden) { return; }
-					lines.push(Array.prototype.map.call(r.cells, function (c) {
+					lines.push(Array.prototype.filter.call(r.cells, function (c) { return !c.classList.contains('rrt-no-csv'); }).map(function (c) {
 						var v = c.textContent.replace(/\s+/g, ' ').trim();
 						/* Never a formula in a spreadsheet: visitors' campaign tags and referrers appear here. */
 						if (/^(=|@|\t|\r|[+-](?!\d))/.test(v)) { v = "'" + v; }
@@ -435,6 +455,6 @@
 		make();
 	}
 
-	function init() { charts(); sorting(); csv(); filters(); builder(); }
+	function init() { charts(); sorting(); csv(); tidy(); filters(); builder(); }
 	if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
 }());

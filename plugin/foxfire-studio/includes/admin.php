@@ -676,6 +676,13 @@ function rrt_settings_page() {
 					</td>
 				</tr>
 				<tr>
+					<th scope="row"><?php esc_html_e( 'When a post is deleted for good', 'foxfire-studio' ); ?></th>
+					<td>
+						<label class="rrt-check"><input type="checkbox" name="<?php echo esc_attr( $opt ); ?>[stats][tidy_on_delete]" value="1" id="rrt-tidy-on" <?php checked( ! isset( $s['stats']['tidy_on_delete'] ) || ! empty( $s['stats']['tidy_on_delete'] ) ); ?>> <?php esc_html_e( 'Also delete its readings: the MP3s and captions in the Media Library, its takes waiting from a phone or kept on the take shelf, and its rows on Foxfire Studio, Recordings', 'foxfire-studio' ); ?></label>
+						<p class="description"><?php esc_html_e( 'Only when the post leaves the Trash for good (Delete Permanently, Empty Trash, or WordPress emptying the Trash after 30 days). A post in the Trash keeps its reading, so restoring it brings the reading back. A file another post still uses is never deleted. Listening history in Reports and Insights stays. Unticked, WordPress\'s usual way applies: the files stay in the Media Library.', 'foxfire-studio' ); ?></p>
+					</td>
+				</tr>
+				<tr>
 					<th scope="row"><?php esc_html_e( 'When the plugin is deleted', 'foxfire-studio' ); ?></th>
 					<td>
 						<label class="rrt-check"><input type="checkbox" name="<?php echo esc_attr( $opt ); ?>[stats][delete_on_uninstall]" value="1" <?php checked( $s['stats']['delete_on_uninstall'] ); ?>> <?php esc_html_e( 'When the plugin is deleted, also delete everything else it keeps: reader stats, listener analytics, cue marks, pronunciation notes, words taught for one post, shared and sent takes, each post\'s reading, captions and Read by links, readings kept aside, and the Whisper files on this site', 'foxfire-studio' ); ?></label>

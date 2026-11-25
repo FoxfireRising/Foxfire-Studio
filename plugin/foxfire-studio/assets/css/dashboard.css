@@ -213,3 +213,14 @@
 	.rrt-report-previews figure.rrt-phone { max-width: 100%; }
 	.rrt-report-frame.is-phone { max-width: 100%; }
 }
+
+/* Recordings (1.36.2): Delete and Clear ask on the page before acting. */
+#rrt-t-recordings { position: relative; } /* keeps the hidden column name inside the table's own scrolling box on a phone */
+.rrt-tidy-ask { display: inline-block; }
+.rrt-tidy-ask > summary { list-style: none; cursor: pointer; }
+.rrt-tidy-ask > summary::-webkit-details-marker { display: none; }
+.rrt-tidy-ask[open] > summary { margin-bottom: 6px; }
+.rrt-tidy-ask form { background: #fff; border: 1px solid #c3c4c7; border-radius: 4px; padding: 8px 10px; max-width: 26em; }
+.rrt-tidy-ask form p { margin: 0 0 8px; white-space: normal; }
+.rrt-tidy-clear form { max-width: 40em; }
+.rrt-tidy-label-gone { color: #8a2424; }

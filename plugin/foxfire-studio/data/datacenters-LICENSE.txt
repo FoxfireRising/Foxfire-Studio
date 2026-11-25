@@ -1,4 +1,4 @@
-datacenters.bin is made from X4BNet lists_vpn (https://github.com/X4BNet/lists_vpn), output/datacenter, edition 2026-11-22.
+datacenters.bin is made from X4BNet lists_vpn (https://github.com/X4BNet/lists_vpn), output/datacenter, edition 2026-11-24.
 
 The ranges come from the IPLocate IP to ASN database: IP address data powered by IPLocate.io (https://www.iplocate.io), licensed under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/). The lists_vpn scripts, curated inputs and generated lists are under the MIT License:
 

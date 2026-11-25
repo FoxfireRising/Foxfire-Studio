@@ -32,7 +32,7 @@ Who sees the player, where it goes, extra custom fields to look for a reading or
 
 ## Reader stats
 
-Keep stats on this site keeps each take's numbers, the words you have taught Whisper and a record of each post's reading on the site, so your history follows you to any computer. Only numbers are kept, never recordings. When the plugin is deleted decides whether everything else goes too (see Update, back up or remove the plugin).
+Keep stats on this site keeps each take's numbers, the words you have taught Whisper and a record of each post's reading on the site, so your history follows you to any computer. Only numbers are kept, never recordings. When a post is deleted for good decides whether its readings, captions and takes go with it (see Recordings and waiting takes). When the plugin is deleted decides whether everything else goes too (see Update, back up or remove the plugin).
 
 ## Listener analytics, countries and recent listens
 

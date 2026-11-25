@@ -14,6 +14,24 @@ Nothing yet.
 
 ---
 
+## [1.36.2] Readings of deleted posts (P)
+
+A patch agreed with the maintainer on 24 November 2026. He had deleted six test posts, and their readings stayed on Recordings with no way to remove them, three of them with MP3s still in the Media Library. WordPress never deletes a post's attachments with it, and the plugin did nothing on its own. Nothing is sent anywhere new; one setting is added.
+
+**Added**
+- **What became of each reading** (tidy.php `rrt_tidy_state()`, `rrt_tidy_label()`): the "On the post now" column reads yes, no, kept aside, "yes, post in the Trash", "no, post in the Trash" or "post deleted", with ", file deleted" when the MP3 no longer exists.
+- **Delete on a row** (`rrt_tidy_row_form()`, `admin_post_rrt_rec_delete`): on every row except the reading on a live post and a kept reading. It asks on the page, inside a `details` (no browser dialog), with the focus on Yes and Cancel giving it back. It deletes the row, its MP3, the captions made with it and WordPress's cover picture for the MP3, keeping any file another post's reading or captions uses ("Removed from the list. The file stays, because … still uses it."). A post in the Trash does not count as using a file. A row whose file is gone or lives outside the site reads **Remove from list**. Needs the dashboard's capability and `delete_posts`.
+- **Clear readings of deleted posts (n)** (`rrt_tidy_clear_form()`, `admin_post_rrt_rec_clear`, `rrt_tidy_leftovers()`): every row whose post is deleted, or in the Trash, in one go, with the same question and the same rules.
+- **A post deleted for good takes its readings with it** (`rrt_tidy_post()` on `before_delete_post`, priority 5, while the post's meta and attachments are still there): its rows, MP3s and captions (the same rules), waiting phone takes and take shelf takes. Moving to the Trash deletes nothing, so a restored post keeps everything. Settings, Reader stats, **When a post is deleted for good** (`stats.tidy_on_delete`, on by default) turns it off.
+
+**Changed**
+- Download CSV leaves out the new Delete column (`.rrt-no-csv`). The table anchors its hidden column name (`position: relative`) so it stays inside the table's own scrolling box at 393 px.
+- Download counting's two lists refreshed (24 November 2026).
+
+**What's new** has 1.36.2 (1.35.0 drops off, the three newest kept); the Recordings and Settings guides and `docs/guide/` updated.
+
+---
+
 ## [1.36.1] Small fixes (P)
 
 A patch agreed with the maintainer on 22 November 2026, fixing faults noticed in earlier live checks and parked until now, so the first public copy carries them fixed. Nothing in the database, the settings or what is stored or sent changes.

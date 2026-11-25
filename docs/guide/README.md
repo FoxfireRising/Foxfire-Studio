@@ -60,6 +60,10 @@ Every change is in [CHANGELOG.md](https://github.com/FoxfireRising/Foxfire-Studi
 
 ## What's new
 
+### 1.36.2
+
+- Readings of deleted posts: Recordings says when a reading's post is in the Trash or deleted, or its file is gone, and has Delete for every reading no longer on a live post, plus Clear readings of deleted posts. When a post is deleted for good, its readings, captions and takes now go with it (Settings, Reader stats).
+
 ### 1.36.1
 
 - Small fixes: a misheard first or last word in the review is a misread word, Follow my voice finishes a take whose last word was misheard, and the switches in the studio's Controls panel line up.
@@ -67,7 +71,3 @@ Every change is in [CHANGELOG.md](https://github.com/FoxfireRising/Foxfire-Studi
 ### 1.36.0
 
 - Fuller help: 28 guides in eight groups, a Start here guide for site owners and for readers, new guides for Settings, finishing the sound, captions and chapters, recordings, kinds of reading, who can do what, updating and removing the plugin, and what listeners get. Settings, Podcast feed and Recordings have a Help with this section link under each section.
-
-### 1.35.0
-
-- YouTube and SoundCloud players can wait for play: switch on Settings, Embedded players, and each one shows as a picture with a play button, so the page loads faster and visitors contact the service only when they press play.

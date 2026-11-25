@@ -869,6 +869,16 @@ The studio's findings (its page keys taking over every control, invisible focus 
 - **New here for every reader:** offered once in a browser with no microphone check saved, inline on the studio's first screen and beside Check microphone, so it never covers anything.
 - **The player's audience** is shown with the editors' preview chosen, and a line saying to switch to Everyone once a post has been checked.
 
+## 9z. Readings of deleted posts (1.36.2)
+
+**Problem:** WordPress never deletes a post's attachments with it, so a deleted post left its MP3s and captions in the Media Library and its rows on Recordings, with nothing on the screen to say so or remove them. Found on a live site after six test posts were deleted.
+
+**Choices:**
+- **Say what became of each reading first,** then offer Delete where it is safe. The reading on a live post never gets Delete (replace it in the studio instead), and nor does a kept reading.
+- **Ask on the page, in a `details`,** never in a browser dialog, so the keyboard, a screen reader and the Chrome extension all work, and nothing is deleted by one press.
+- **Never delete a file something else uses.** Another post's reading or captions counts; a post in the Trash does not, since emptying the Trash would delete it anyway. WordPress's cover picture for the MP3 goes with it on the same rule.
+- **The Trash deletes nothing.** Only deleting for good takes the readings and takes with it, so restoring a post restores everything. On by default because a site owner expects deleted to mean deleted; a switch in Settings, Reader stats, for anyone who keeps media on purpose.
+
 ## 18. Lessons from real recordings
 
 Things learned by running it on a real voice that synthetic tests did not show:
